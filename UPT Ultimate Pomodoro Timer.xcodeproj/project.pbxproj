@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		663AA148C61E47E64EF0F339 /* Pods_UPT_Ultimate_Pomodoro_Timer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AF82C48A81B8A9321F4092 /* Pods_UPT_Ultimate_Pomodoro_Timer.framework */; };
+		CE19A82B2AD83EE6000B1920 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19A82A2AD83EE6000B1920 /* CustomTransition.swift */; };
+		CE19A82D2AD84200000B1920 /* TimerControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19A82C2AD84200000B1920 /* TimerControlPanel.swift */; };
+		CE19A82F2AD8420B000B1920 /* SettingsControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19A82E2AD8420B000B1920 /* SettingsControlPanel.swift */; };
+		CE19A8372AD9396C000B1920 /* BaseControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19A8362AD9396C000B1920 /* BaseControlPanel.swift */; };
+		CE19A8392AD94E83000B1920 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19A8382AD94E83000B1920 /* SettingsView.swift */; };
+		CE19A8432ADE6DBD000B1920 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE19A83E2ADE6D9B000B1920 /* Montserrat-Black.ttf */; };
+		CE19A8442ADE6DBF000B1920 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE19A83C2ADE6D9B000B1920 /* Montserrat-Bold.ttf */; };
+		CE19A8452ADE6DC1000B1920 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE19A8412ADE6D9B000B1920 /* Montserrat-ExtraBold.ttf */; };
+		CE19A8462ADE6DC2000B1920 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE19A83F2ADE6D9B000B1920 /* Montserrat-ExtraLight.ttf */; };
+		CE19A8472ADE6DC4000B1920 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE19A8402ADE6D9B000B1920 /* Montserrat-Light.ttf */; };
+		CE19A8482ADE6DC6000B1920 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE19A8422ADE6D9B000B1920 /* Montserrat-Medium.ttf */; };
+		CE19A8492ADE6DC8000B1920 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE19A83A2ADE6D9A000B1920 /* Montserrat-Regular.ttf */; };
+		CE19A84A2ADE6DCA000B1920 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE19A83D2ADE6D9B000B1920 /* Montserrat-SemiBold.ttf */; };
+		CE19A84B2ADE6DCD000B1920 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE19A83B2ADE6D9A000B1920 /* Montserrat-Thin.ttf */; };
+		CE3625212AD6BBCE00D4F470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3625202AD6BBCE00D4F470 /* AppDelegate.swift */; };
+		CE3625232AD6BBCE00D4F470 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3625222AD6BBCE00D4F470 /* SceneDelegate.swift */; };
+		CE3625252AD6BBCE00D4F470 /* TimerScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3625242AD6BBCE00D4F470 /* TimerScreenViewController.swift */; };
+		CE36252A2AD6BBCF00D4F470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3625292AD6BBCF00D4F470 /* Assets.xcassets */; };
+		CE36252D2AD6BBCF00D4F470 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE36252B2AD6BBCF00D4F470 /* LaunchScreen.storyboard */; };
+		CE36253C2AD6C13D00D4F470 /* TimerScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36253B2AD6C13D00D4F470 /* TimerScreenView.swift */; };
+		CE36253E2AD6C14900D4F470 /* TimerScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36253D2AD6C14900D4F470 /* TimerScreenViewModel.swift */; };
+		CE3625412AD6C1AC00D4F470 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3625402AD6C1AC00D4F470 /* ViewModel.swift */; };
+		CE3625432AD6C20B00D4F470 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3625422AD6C20B00D4F470 /* View.swift */; };
+		CE3625462AD6D3F800D4F470 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3625452AD6D3F800D4F470 /* SettingsViewController.swift */; };
+		CE36254A2AD6D7B300D4F470 /* UPTTabBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3625492AD6D7B300D4F470 /* UPTTabBarProtocol.swift */; };
+		CEFAC4442AD8024F00087CC5 /* UPTTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAC4432AD8024F00087CC5 /* UPTTabItem.swift */; };
+		CEFAC4462AD8060E00087CC5 /* UPTTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAC4452AD8060E00087CC5 /* UPTTabBarController.swift */; };
+		CEFAC4482AD806FF00087CC5 /* UPTTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAC4472AD806FF00087CC5 /* UPTTabBar.swift */; };
+		CEFAC44A2AD8116C00087CC5 /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAC4492AD8116C00087CC5 /* ColorSet.swift */; };
+		CEFAC44D2AD811C800087CC5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAC44C2AD811C800087CC5 /* UIColor+Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2A2F86B660F57D9B962C2FFB /* Pods-UPT Ultimate Pomodoro Timer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPT Ultimate Pomodoro Timer.release.xcconfig"; path = "Target Support Files/Pods-UPT Ultimate Pomodoro Timer/Pods-UPT Ultimate Pomodoro Timer.release.xcconfig"; sourceTree = "<group>"; };
+		90AF82C48A81B8A9321F4092 /* Pods_UPT_Ultimate_Pomodoro_Timer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UPT_Ultimate_Pomodoro_Timer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F33BF76689F2DB8CE07483C /* Pods-UPT Ultimate Pomodoro Timer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPT Ultimate Pomodoro Timer.debug.xcconfig"; path = "Target Support Files/Pods-UPT Ultimate Pomodoro Timer/Pods-UPT Ultimate Pomodoro Timer.debug.xcconfig"; sourceTree = "<group>"; };
+		CE19A82A2AD83EE6000B1920 /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
+		CE19A82C2AD84200000B1920 /* TimerControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControlPanel.swift; sourceTree = "<group>"; };
+		CE19A82E2AD8420B000B1920 /* SettingsControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsControlPanel.swift; sourceTree = "<group>"; };
+		CE19A8362AD9396C000B1920 /* BaseControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseControlPanel.swift; sourceTree = "<group>"; };
+		CE19A8382AD94E83000B1920 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CE19A83A2ADE6D9A000B1920 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		CE19A83B2ADE6D9A000B1920 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		CE19A83C2ADE6D9B000B1920 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		CE19A83D2ADE6D9B000B1920 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		CE19A83E2ADE6D9B000B1920 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		CE19A83F2ADE6D9B000B1920 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		CE19A8402ADE6D9B000B1920 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		CE19A8412ADE6D9B000B1920 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		CE19A8422ADE6D9B000B1920 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		CE36251D2AD6BBCE00D4F470 /* UPT Ultimate Pomodoro Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UPT Ultimate Pomodoro Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3625202AD6BBCE00D4F470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE3625222AD6BBCE00D4F470 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE3625242AD6BBCE00D4F470 /* TimerScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerScreenViewController.swift; sourceTree = "<group>"; };
+		CE3625292AD6BBCF00D4F470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE36252C2AD6BBCF00D4F470 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE36252E2AD6BBCF00D4F470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE36253B2AD6C13D00D4F470 /* TimerScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerScreenView.swift; sourceTree = "<group>"; };
+		CE36253D2AD6C14900D4F470 /* TimerScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerScreenViewModel.swift; sourceTree = "<group>"; };
+		CE3625402AD6C1AC00D4F470 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		CE3625422AD6C20B00D4F470 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		CE3625452AD6D3F800D4F470 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CE3625492AD6D7B300D4F470 /* UPTTabBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPTTabBarProtocol.swift; sourceTree = "<group>"; };
+		CEFAC4432AD8024F00087CC5 /* UPTTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPTTabItem.swift; sourceTree = "<group>"; };
+		CEFAC4452AD8060E00087CC5 /* UPTTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPTTabBarController.swift; sourceTree = "<group>"; };
+		CEFAC4472AD806FF00087CC5 /* UPTTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPTTabBar.swift; sourceTree = "<group>"; };
+		CEFAC4492AD8116C00087CC5 /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
+		CEFAC44C2AD811C800087CC5 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE36251A2AD6BBCE00D4F470 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				663AA148C61E47E64EF0F339 /* Pods_UPT_Ultimate_Pomodoro_Timer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72CB114D377D1B822A589016 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90AF82C48A81B8A9321F4092 /* Pods_UPT_Ultimate_Pomodoro_Timer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		837374BF100B1912E3A92D47 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F33BF76689F2DB8CE07483C /* Pods-UPT Ultimate Pomodoro Timer.debug.xcconfig */,
+				2A2F86B660F57D9B962C2FFB /* Pods-UPT Ultimate Pomodoro Timer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE19A8282AD83E82000B1920 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CE19A8292AD83ED6000B1920 /* Transitions */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CE19A8292AD83ED6000B1920 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				CE19A82A2AD83EE6000B1920 /* CustomTransition.swift */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
+		CE19A8342AD930F5000B1920 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		CE19A8352AD937A4000B1920 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CE19A8362AD9396C000B1920 /* BaseControlPanel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CE3625142AD6BBCE00D4F470 = {
+			isa = PBXGroup;
+			children = (
+				CE36251F2AD6BBCE00D4F470 /* UPT Ultimate Pomodoro Timer */,
+				CE36251E2AD6BBCE00D4F470 /* Products */,
+				837374BF100B1912E3A92D47 /* Pods */,
+				72CB114D377D1B822A589016 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CE36251E2AD6BBCE00D4F470 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE36251D2AD6BBCE00D4F470 /* UPT Ultimate Pomodoro Timer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE36251F2AD6BBCE00D4F470 /* UPT Ultimate Pomodoro Timer */ = {
+			isa = PBXGroup;
+			children = (
+				CE3625202AD6BBCE00D4F470 /* AppDelegate.swift */,
+				CE3625222AD6BBCE00D4F470 /* SceneDelegate.swift */,
+				CE3625362AD6BED000D4F470 /* Scenes */,
+				CE3625372AD6BF2900D4F470 /* Common */,
+				CE19A8342AD930F5000B1920 /* Animations */,
+				CE3625392AD6BFAF00D4F470 /* Resources */,
+				CE36253F2AD6C19D00D4F470 /* Core */,
+			);
+			path = "UPT Ultimate Pomodoro Timer";
+			sourceTree = "<group>";
+		};
+		CE3625362AD6BED000D4F470 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CE36253A2AD6C11A00D4F470 /* TimerScreen */,
+				CE3625442AD6D3D300D4F470 /* Settings */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CE3625372AD6BF2900D4F470 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE19A8352AD937A4000B1920 /* Base */,
+				CE19A8282AD83E82000B1920 /* Router */,
+				CEFAC44B2AD811B300087CC5 /* Extension */,
+				CE3625382AD6BF3000D4F470 /* TabBar */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CE3625382AD6BF3000D4F470 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CE3625492AD6D7B300D4F470 /* UPTTabBarProtocol.swift */,
+				CEFAC4432AD8024F00087CC5 /* UPTTabItem.swift */,
+				CEFAC4452AD8060E00087CC5 /* UPTTabBarController.swift */,
+				CEFAC4472AD806FF00087CC5 /* UPTTabBar.swift */,
+				CE19A82C2AD84200000B1920 /* TimerControlPanel.swift */,
+				CE19A82E2AD8420B000B1920 /* SettingsControlPanel.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CE3625392AD6BFAF00D4F470 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CEFAC44E2AD8124100087CC5 /* Fonts */,
+				CEFAC4492AD8116C00087CC5 /* ColorSet.swift */,
+				CE3625292AD6BBCF00D4F470 /* Assets.xcassets */,
+				CE36252B2AD6BBCF00D4F470 /* LaunchScreen.storyboard */,
+				CE36252E2AD6BBCF00D4F470 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE36253A2AD6C11A00D4F470 /* TimerScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE3625242AD6BBCE00D4F470 /* TimerScreenViewController.swift */,
+				CE36253B2AD6C13D00D4F470 /* TimerScreenView.swift */,
+				CE36253D2AD6C14900D4F470 /* TimerScreenViewModel.swift */,
+			);
+			path = TimerScreen;
+			sourceTree = "<group>";
+		};
+		CE36253F2AD6C19D00D4F470 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CE3625402AD6C1AC00D4F470 /* ViewModel.swift */,
+				CE3625422AD6C20B00D4F470 /* View.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CE3625442AD6D3D300D4F470 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CE3625452AD6D3F800D4F470 /* SettingsViewController.swift */,
+				CE19A8382AD94E83000B1920 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		CEFAC44B2AD811B300087CC5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CEFAC44C2AD811C800087CC5 /* UIColor+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CEFAC44E2AD8124100087CC5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CE19A83E2ADE6D9B000B1920 /* Montserrat-Black.ttf */,
+				CE19A83C2ADE6D9B000B1920 /* Montserrat-Bold.ttf */,
+				CE19A8412ADE6D9B000B1920 /* Montserrat-ExtraBold.ttf */,
+				CE19A83F2ADE6D9B000B1920 /* Montserrat-ExtraLight.ttf */,
+				CE19A8402ADE6D9B000B1920 /* Montserrat-Light.ttf */,
+				CE19A8422ADE6D9B000B1920 /* Montserrat-Medium.ttf */,
+				CE19A83A2ADE6D9A000B1920 /* Montserrat-Regular.ttf */,
+				CE19A83D2ADE6D9B000B1920 /* Montserrat-SemiBold.ttf */,
+				CE19A83B2ADE6D9A000B1920 /* Montserrat-Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE36251C2AD6BBCE00D4F470 /* UPT Ultimate Pomodoro Timer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE3625312AD6BBCF00D4F470 /* Build configuration list for PBXNativeTarget "UPT Ultimate Pomodoro Timer" */;
+			buildPhases = (
+				83CF5D510714AF163BCEC2DC /* [CP] Check Pods Manifest.lock */,
+				CE3625192AD6BBCE00D4F470 /* Sources */,
+				CE36251A2AD6BBCE00D4F470 /* Frameworks */,
+				CE36251B2AD6BBCE00D4F470 /* Resources */,
+				760890AD1C16339CFF99BEC7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UPT Ultimate Pomodoro Timer";
+			productName = "UPT Ultimate Pomodoro Timer";
+			productReference = CE36251D2AD6BBCE00D4F470 /* UPT Ultimate Pomodoro Timer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE3625152AD6BBCE00D4F470 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					CE36251C2AD6BBCE00D4F470 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = CE3625182AD6BBCE00D4F470 /* Build configuration list for PBXProject "UPT Ultimate Pomodoro Timer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE3625142AD6BBCE00D4F470;
+			productRefGroup = CE36251E2AD6BBCE00D4F470 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE36251C2AD6BBCE00D4F470 /* UPT Ultimate Pomodoro Timer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE36251B2AD6BBCE00D4F470 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE19A8492ADE6DC8000B1920 /* Montserrat-Regular.ttf in Resources */,
+				CE19A8472ADE6DC4000B1920 /* Montserrat-Light.ttf in Resources */,
+				CE19A8452ADE6DC1000B1920 /* Montserrat-ExtraBold.ttf in Resources */,
+				CE19A8462ADE6DC2000B1920 /* Montserrat-ExtraLight.ttf in Resources */,
+				CE19A84A2ADE6DCA000B1920 /* Montserrat-SemiBold.ttf in Resources */,
+				CE19A8442ADE6DBF000B1920 /* Montserrat-Bold.ttf in Resources */,
+				CE36252D2AD6BBCF00D4F470 /* LaunchScreen.storyboard in Resources */,
+				CE19A84B2ADE6DCD000B1920 /* Montserrat-Thin.ttf in Resources */,
+				CE36252A2AD6BBCF00D4F470 /* Assets.xcassets in Resources */,
+				CE19A8482ADE6DC6000B1920 /* Montserrat-Medium.ttf in Resources */,
+				CE19A8432ADE6DBD000B1920 /* Montserrat-Black.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		760890AD1C16339CFF99BEC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UPT Ultimate Pomodoro Timer/Pods-UPT Ultimate Pomodoro Timer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UPT Ultimate Pomodoro Timer/Pods-UPT Ultimate Pomodoro Timer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UPT Ultimate Pomodoro Timer/Pods-UPT Ultimate Pomodoro Timer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83CF5D510714AF163BCEC2DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UPT Ultimate Pomodoro Timer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE3625192AD6BBCE00D4F470 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE3625432AD6C20B00D4F470 /* View.swift in Sources */,
+				CE36253E2AD6C14900D4F470 /* TimerScreenViewModel.swift in Sources */,
+				CEFAC4442AD8024F00087CC5 /* UPTTabItem.swift in Sources */,
+				CE3625252AD6BBCE00D4F470 /* TimerScreenViewController.swift in Sources */,
+				CE19A82D2AD84200000B1920 /* TimerControlPanel.swift in Sources */,
+				CE19A82F2AD8420B000B1920 /* SettingsControlPanel.swift in Sources */,
+				CE3625212AD6BBCE00D4F470 /* AppDelegate.swift in Sources */,
+				CEFAC4462AD8060E00087CC5 /* UPTTabBarController.swift in Sources */,
+				CEFAC4482AD806FF00087CC5 /* UPTTabBar.swift in Sources */,
+				CE19A8372AD9396C000B1920 /* BaseControlPanel.swift in Sources */,
+				CE19A82B2AD83EE6000B1920 /* CustomTransition.swift in Sources */,
+				CEFAC44A2AD8116C00087CC5 /* ColorSet.swift in Sources */,
+				CEFAC44D2AD811C800087CC5 /* UIColor+Extension.swift in Sources */,
+				CE36253C2AD6C13D00D4F470 /* TimerScreenView.swift in Sources */,
+				CE3625232AD6BBCE00D4F470 /* SceneDelegate.swift in Sources */,
+				CE36254A2AD6D7B300D4F470 /* UPTTabBarProtocol.swift in Sources */,
+				CE3625412AD6C1AC00D4F470 /* ViewModel.swift in Sources */,
+				CE3625462AD6D3F800D4F470 /* SettingsViewController.swift in Sources */,
+				CE19A8392AD94E83000B1920 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE36252B2AD6BBCF00D4F470 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE36252C2AD6BBCF00D4F470 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE36252F2AD6BBCF00D4F470 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE3625302AD6BBCF00D4F470 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE3625322AD6BBCF00D4F470 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F33BF76689F2DB8CE07483C /* Pods-UPT Ultimate Pomodoro Timer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W53T2K88YK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "UPT Ultimate Pomodoro Timer/Resources/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = UPT;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Cosmopolito.UPT-Ultimate-Pomodoro-Timer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CE3625332AD6BBCF00D4F470 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A2F86B660F57D9B962C2FFB /* Pods-UPT Ultimate Pomodoro Timer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W53T2K88YK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "UPT Ultimate Pomodoro Timer/Resources/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = UPT;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Cosmopolito.UPT-Ultimate-Pomodoro-Timer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE3625182AD6BBCE00D4F470 /* Build configuration list for PBXProject "UPT Ultimate Pomodoro Timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE36252F2AD6BBCF00D4F470 /* Debug */,
+				CE3625302AD6BBCF00D4F470 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE3625312AD6BBCF00D4F470 /* Build configuration list for PBXNativeTarget "UPT Ultimate Pomodoro Timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE3625322AD6BBCF00D4F470 /* Debug */,
+				CE3625332AD6BBCF00D4F470 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE3625152AD6BBCE00D4F470 /* Project object */;
+}
