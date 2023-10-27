@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		663AA148C61E47E64EF0F339 /* Pods_UPT_Ultimate_Pomodoro_Timer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AF82C48A81B8A9321F4092 /* Pods_UPT_Ultimate_Pomodoro_Timer.framework */; };
+		CE0108842AE93DD5004749C2 /* InteractiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0108832AE93DD5004749C2 /* InteractiveButton.swift */; };
 		CE19A82B2AD83EE6000B1920 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19A82A2AD83EE6000B1920 /* CustomTransition.swift */; };
 		CE19A82D2AD84200000B1920 /* TimerControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19A82C2AD84200000B1920 /* TimerControlPanel.swift */; };
 		CE19A82F2AD8420B000B1920 /* SettingsControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19A82E2AD8420B000B1920 /* SettingsControlPanel.swift */; };
 		CE19A8372AD9396C000B1920 /* BaseControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19A8362AD9396C000B1920 /* BaseControlPanel.swift */; };
-		CE19A8392AD94E83000B1920 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19A8382AD94E83000B1920 /* SettingsView.swift */; };
+		CE19A8392AD94E83000B1920 /* SettingsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19A8382AD94E83000B1920 /* SettingsScreenView.swift */; };
 		CE19A8432ADE6DBD000B1920 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE19A83E2ADE6D9B000B1920 /* Montserrat-Black.ttf */; };
 		CE19A8442ADE6DBF000B1920 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE19A83C2ADE6D9B000B1920 /* Montserrat-Bold.ttf */; };
 		CE19A8452ADE6DC1000B1920 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE19A8412ADE6D9B000B1920 /* Montserrat-ExtraBold.ttf */; };
@@ -31,7 +32,7 @@
 		CE36253E2AD6C14900D4F470 /* TimerScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36253D2AD6C14900D4F470 /* TimerScreenViewModel.swift */; };
 		CE3625412AD6C1AC00D4F470 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3625402AD6C1AC00D4F470 /* ViewModel.swift */; };
 		CE3625432AD6C20B00D4F470 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3625422AD6C20B00D4F470 /* View.swift */; };
-		CE3625462AD6D3F800D4F470 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3625452AD6D3F800D4F470 /* SettingsViewController.swift */; };
+		CE3625462AD6D3F800D4F470 /* SettingsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3625452AD6D3F800D4F470 /* SettingsScreenViewController.swift */; };
 		CE36254A2AD6D7B300D4F470 /* UPTTabBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3625492AD6D7B300D4F470 /* UPTTabBarProtocol.swift */; };
 		CEFAC4442AD8024F00087CC5 /* UPTTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAC4432AD8024F00087CC5 /* UPTTabItem.swift */; };
 		CEFAC4462AD8060E00087CC5 /* UPTTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAC4452AD8060E00087CC5 /* UPTTabBarController.swift */; };
@@ -44,11 +45,12 @@
 		2A2F86B660F57D9B962C2FFB /* Pods-UPT Ultimate Pomodoro Timer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPT Ultimate Pomodoro Timer.release.xcconfig"; path = "Target Support Files/Pods-UPT Ultimate Pomodoro Timer/Pods-UPT Ultimate Pomodoro Timer.release.xcconfig"; sourceTree = "<group>"; };
 		90AF82C48A81B8A9321F4092 /* Pods_UPT_Ultimate_Pomodoro_Timer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UPT_Ultimate_Pomodoro_Timer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F33BF76689F2DB8CE07483C /* Pods-UPT Ultimate Pomodoro Timer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPT Ultimate Pomodoro Timer.debug.xcconfig"; path = "Target Support Files/Pods-UPT Ultimate Pomodoro Timer/Pods-UPT Ultimate Pomodoro Timer.debug.xcconfig"; sourceTree = "<group>"; };
+		CE0108832AE93DD5004749C2 /* InteractiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveButton.swift; sourceTree = "<group>"; };
 		CE19A82A2AD83EE6000B1920 /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		CE19A82C2AD84200000B1920 /* TimerControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControlPanel.swift; sourceTree = "<group>"; };
 		CE19A82E2AD8420B000B1920 /* SettingsControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsControlPanel.swift; sourceTree = "<group>"; };
 		CE19A8362AD9396C000B1920 /* BaseControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseControlPanel.swift; sourceTree = "<group>"; };
-		CE19A8382AD94E83000B1920 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CE19A8382AD94E83000B1920 /* SettingsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenView.swift; sourceTree = "<group>"; };
 		CE19A83A2ADE6D9A000B1920 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		CE19A83B2ADE6D9A000B1920 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
 		CE19A83C2ADE6D9B000B1920 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
@@ -69,7 +71,7 @@
 		CE36253D2AD6C14900D4F470 /* TimerScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerScreenViewModel.swift; sourceTree = "<group>"; };
 		CE3625402AD6C1AC00D4F470 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		CE3625422AD6C20B00D4F470 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		CE3625452AD6D3F800D4F470 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CE3625452AD6D3F800D4F470 /* SettingsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewController.swift; sourceTree = "<group>"; };
 		CE3625492AD6D7B300D4F470 /* UPTTabBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPTTabBarProtocol.swift; sourceTree = "<group>"; };
 		CEFAC4432AD8024F00087CC5 /* UPTTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPTTabItem.swift; sourceTree = "<group>"; };
 		CEFAC4452AD8060E00087CC5 /* UPTTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPTTabBarController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,21 @@
 				2A2F86B660F57D9B962C2FFB /* Pods-UPT Ultimate Pomodoro Timer.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE0108822AE93D9F004749C2 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				CE0108832AE93DD5004749C2 /* InteractiveButton.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		CE0108862AEAA56A004749C2 /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PieChart;
 			sourceTree = "<group>";
 		};
 		CE19A8282AD83E82000B1920 /* Router */ = {
@@ -182,6 +199,8 @@
 		CE3625372AD6BF2900D4F470 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE0108862AEAA56A004749C2 /* PieChart */,
+				CE0108822AE93D9F004749C2 /* Controls */,
 				CE19A8352AD937A4000B1920 /* Base */,
 				CE19A8282AD83E82000B1920 /* Router */,
 				CEFAC44B2AD811B300087CC5 /* Extension */,
@@ -237,8 +256,8 @@
 		CE3625442AD6D3D300D4F470 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				CE3625452AD6D3F800D4F470 /* SettingsViewController.swift */,
-				CE19A8382AD94E83000B1920 /* SettingsView.swift */,
+				CE3625452AD6D3F800D4F470 /* SettingsScreenViewController.swift */,
+				CE19A8382AD94E83000B1920 /* SettingsScreenView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -398,6 +417,7 @@
 				CE19A82F2AD8420B000B1920 /* SettingsControlPanel.swift in Sources */,
 				CE3625212AD6BBCE00D4F470 /* AppDelegate.swift in Sources */,
 				CEFAC4462AD8060E00087CC5 /* UPTTabBarController.swift in Sources */,
+				CE0108842AE93DD5004749C2 /* InteractiveButton.swift in Sources */,
 				CEFAC4482AD806FF00087CC5 /* UPTTabBar.swift in Sources */,
 				CE19A8372AD9396C000B1920 /* BaseControlPanel.swift in Sources */,
 				CE19A82B2AD83EE6000B1920 /* CustomTransition.swift in Sources */,
@@ -407,8 +427,8 @@
 				CE3625232AD6BBCE00D4F470 /* SceneDelegate.swift in Sources */,
 				CE36254A2AD6D7B300D4F470 /* UPTTabBarProtocol.swift in Sources */,
 				CE3625412AD6C1AC00D4F470 /* ViewModel.swift in Sources */,
-				CE3625462AD6D3F800D4F470 /* SettingsViewController.swift in Sources */,
-				CE19A8392AD94E83000B1920 /* SettingsView.swift in Sources */,
+				CE3625462AD6D3F800D4F470 /* SettingsScreenViewController.swift in Sources */,
+				CE19A8392AD94E83000B1920 /* SettingsScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

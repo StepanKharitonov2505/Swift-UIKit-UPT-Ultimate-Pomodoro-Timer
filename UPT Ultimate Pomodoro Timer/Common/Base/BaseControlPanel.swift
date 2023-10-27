@@ -1,10 +1,3 @@
-//
-//  BaseControlPanel.swift
-//  UPT Ultimate Pomodoro Timer
-//
-//  Created by  user on 13.10.2023.
-//
-
 import UIKit
 
 class BaseControlPanel: UIView {

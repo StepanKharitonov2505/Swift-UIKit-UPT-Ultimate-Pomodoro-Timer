@@ -1,9 +1,3 @@
-//
-//  CustomTransition.swift
-//  UPT Ultimate Pomodoro Timer
-//
-//  Created by  user on 12.10.2023.
-//
 import UIKit
 
 final class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {

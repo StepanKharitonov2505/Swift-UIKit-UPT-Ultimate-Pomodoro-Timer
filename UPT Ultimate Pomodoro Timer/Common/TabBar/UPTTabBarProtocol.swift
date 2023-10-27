@@ -1,10 +1,3 @@
-//
-//  UPTTabBatProtocol.swift
-//  UPT Ultimate Pomodoro Timer
-//
-//  Created by  user on 11.10.2023.
-//
-
 import Foundation
 
 protocol UPTTabBarProtocol: AnyObject {
@@ -12,6 +5,5 @@ protocol UPTTabBarProtocol: AnyObject {
     func pressPause()
     func pressNextTimePeriod()
     func pressRefresh()
-    func pressLeftItem()
-    func pressRightItem()
+    func pressSave()
 }

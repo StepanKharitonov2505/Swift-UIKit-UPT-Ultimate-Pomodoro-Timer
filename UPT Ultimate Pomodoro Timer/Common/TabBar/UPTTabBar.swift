@@ -1,14 +1,11 @@
-//
-//  UPTTabBar.swift
-//  UPT Ultimate Pomodoro Timer
-//
-//  Created by  user on 12.10.2023.
-//
-
 import UIKit
 import SnapKit
 
 final class UPTTabBar: UIView {
+    
+    // MARK: - Activation Control Panel
+    
+    private let isActiveControlPanel: Bool = false
     
     // MARK: - Internal Properties
     
@@ -22,7 +19,7 @@ final class UPTTabBar: UIView {
     private let timerControlPanel = TimerControlPanel()
     private let settingsControlPanel = SettingsControlPanel()
     
-    // MARK: - LifeCycle
+    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,6 +38,8 @@ final class UPTTabBar: UIView {
         setNeedsLayout()
         layoutIfNeeded()
     }
+    
+    // MARK: - Override SuperMethods
     
     override func didMoveToWindow() {
         switchTab(from: 1, to: 0)
@@ -67,37 +66,40 @@ private extension UPTTabBar {
     func configureUI(_ menuItems: [UPTTabItem]) {
         backgroundColor = .clear
         isUserInteractionEnabled = true
-        addSubview(controlPanel)
         addSubview(tabBarFoundation)
-        controlPanel.addSubview(timerControlPanel)
-        controlPanel.addSubview(settingsControlPanel)
-        
-        timerControlPanel.isHidden = true
-        settingsControlPanel.isHidden = true
         
         tabBarFoundation.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
         
-        controlPanel.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(10)
-            make.bottom.equalToSuperview()
-            make.right.equalToSuperview().inset(10)
-            make.height.equalTo(NumericContants.minHeightControlPanel)
-        }
-        
-        timerControlPanel.snp.makeConstraints { make in
-            make.top.left.right.equalTo(controlPanel)
-            make.height.equalTo(NumericContants.contentControlPanelHeight)
-        }
-        
-        settingsControlPanel.snp.makeConstraints { make in
-            make.top.left.right.equalTo(controlPanel)
-            make.height.equalTo(NumericContants.contentControlPanelHeight)
+        if isActiveControlPanel {
+            addSubview(controlPanel)
+            controlPanel.addSubview(timerControlPanel)
+            controlPanel.addSubview(settingsControlPanel)
+            
+            timerControlPanel.isHidden = true
+            settingsControlPanel.isHidden = true
+            
+            controlPanel.snp.makeConstraints { make in
+                make.left.equalToSuperview().offset(10)
+                make.bottom.equalToSuperview()
+                make.right.equalToSuperview().inset(10)
+                make.height.equalTo(NumericContants.minHeightControlPanel)
+            }
+            
+            timerControlPanel.snp.makeConstraints { make in
+                make.top.left.right.equalTo(controlPanel)
+                make.height.equalTo(NumericContants.contentControlPanelHeight)
+            }
+            
+            settingsControlPanel.snp.makeConstraints { make in
+                make.top.left.right.equalTo(controlPanel)
+                make.height.equalTo(NumericContants.contentControlPanelHeight)
+            }
         }
         
         for i in 0 ..< menuItems.count {
-            let itemWidth = (self.frame.width*NumericContants.percentageTabBarWidthRelativeOrigin) / CGFloat(menuItems.count)
+            let itemWidth = (self.frame.width*NumericContants.tabBarWidthFactor) / CGFloat(menuItems.count)
             let leadingAnchor = itemWidth * CGFloat(i)
             
             let itemView = self.createTabItem(item: menuItems[i])
@@ -165,45 +167,51 @@ private extension UPTTabBar {
         let inactiveTab = tabBarFoundation.subviews[from]
         
         UIView.animate(withDuration: NumericContants.tabItemAnimationDuration) {
-            tabToActive.viewWithTag(13)?.tintColor = ColorSet.tabBarSelectItemTintColor
-            inactiveTab.viewWithTag(13)?.tintColor = ColorSet.tabBarUnselectItemTintColor
+            tabToActive.viewWithTag(13)?.tintColor = ColorSet
+                .TabBarColors
+                .tabBarSelectItemTintColor
+            inactiveTab.viewWithTag(13)?.tintColor = ColorSet
+                .TabBarColors
+                .tabBarUnselectItemTintColor
         }
         
-        UIView.animate(withDuration: NumericContants.controlPanelAnimationDuration) { [weak self] in
-            guard let self = self else { return }
-            if self.controlPanel.frame.height != NumericContants.minHeightControlPanel {
-                self.controlPanel.snp.updateConstraints { make in
-                    make.height.equalTo(NumericContants.minHeightControlPanel)
-                }
-                self.layoutIfNeeded()
-            } else {
-                if self.activeItem == 0 {
-                    self.timerControlPanel.isHidden = false
-                    self.settingsControlPanel.isHidden = true
+        if isActiveControlPanel {
+            UIView.animate(withDuration: NumericContants.controlPanelAnimationDuration) { [weak self] in
+                guard let self = self else { return }
+                if self.controlPanel.frame.height != NumericContants.minHeightControlPanel {
+                    self.controlPanel.snp.updateConstraints { make in
+                        make.height.equalTo(NumericContants.minHeightControlPanel)
+                    }
+                    self.layoutIfNeeded()
                 } else {
-                    self.timerControlPanel.isHidden = true
-                    self.settingsControlPanel.isHidden = false
-                }
-                self.controlPanel.snp.updateConstraints { make in
-                    make.height.equalTo(NumericContants.maxHeightControlPanel)
-                }
-                self.layoutIfNeeded()
-            }
-        } completion: { [weak self] _ in
-            guard let self = self else { return }
-            if self.controlPanel.frame.height == NumericContants.minHeightControlPanel {
-                if self.activeItem == 0 {
-                    self.timerControlPanel.isHidden = false
-                    self.settingsControlPanel.isHidden = true
-                } else {
-                    self.timerControlPanel.isHidden = true
-                    self.settingsControlPanel.isHidden = false
-                }
-                UIView.animate(withDuration: NumericContants.controlPanelAnimationDuration) {
+                    if self.activeItem == 0 {
+                        self.timerControlPanel.isHidden = false
+                        self.settingsControlPanel.isHidden = true
+                    } else {
+                        self.timerControlPanel.isHidden = true
+                        self.settingsControlPanel.isHidden = false
+                    }
                     self.controlPanel.snp.updateConstraints { make in
                         make.height.equalTo(NumericContants.maxHeightControlPanel)
                     }
                     self.layoutIfNeeded()
+                }
+            } completion: { [weak self] _ in
+                guard let self = self else { return }
+                if self.controlPanel.frame.height == NumericContants.minHeightControlPanel {
+                    if self.activeItem == 0 {
+                        self.timerControlPanel.isHidden = false
+                        self.settingsControlPanel.isHidden = true
+                    } else {
+                        self.timerControlPanel.isHidden = true
+                        self.settingsControlPanel.isHidden = false
+                    }
+                    UIView.animate(withDuration: NumericContants.controlPanelAnimationDuration) {
+                        self.controlPanel.snp.updateConstraints { make in
+                            make.height.equalTo(NumericContants.maxHeightControlPanel)
+                        }
+                        self.layoutIfNeeded()
+                    }
                 }
             }
         }
@@ -219,7 +227,10 @@ private extension UPTTabBar {
         if #available(iOS 13, *) {
             view.layer.cornerCurve = .continuous
         }
-        view.backgroundColor = ColorSet.controlPanelBackgroundColor
+        view.backgroundColor = ColorSet
+            .TabBarColors
+            .ControlPanelColors
+            .controlPanelBackgroundColor
         return view
     }
     
@@ -234,7 +245,7 @@ private extension UPTTabBar {
 //        view.layer.shadowRadius = 5
 //        view.layer.shadowOpacity = 0.7
         view.clipsToBounds = false
-        view.backgroundColor = ColorSet.tabBarBackgroundColor
+        view.backgroundColor = ColorSet.TabBarColors.tabBarBackgroundColor
         return view
     }
 }
@@ -243,13 +254,13 @@ private extension UPTTabBar {
 
 private extension UPTTabBar {
     enum NumericContants {
-        static let cornerRadius: CGFloat = 20
+        static let cornerRadius: CGFloat = 15
         static let minHeightControlPanel: CGFloat = 80
         static let maxHeightControlPanel: CGFloat = 160
         static let sizeImageTabItem: CGFloat = 30
         static let tabItemAnimationDuration: TimeInterval = 0.25
         static let controlPanelAnimationDuration: TimeInterval = 0.15
         static let contentControlPanelHeight: CGFloat = 80
-        static let percentageTabBarWidthRelativeOrigin: Double = 0.7
+        static let tabBarWidthFactor: Double = 0.7
     }
 }

@@ -1,10 +1,3 @@
-//
-//  SettingsControlPanel.swift
-//  UPT Ultimate Pomodoro Timer
-//
-//  Created by  user on 12.10.2023.
-//
-
 import UIKit
 import SnapKit
 
@@ -14,7 +7,7 @@ final class SettingsControlPanel: BaseControlPanel {
     
     private lazy var saveButton = makeSaveButton()
     
-    // MARK: - Override Methods
+    // MARK: - Override SuperMethods
 
     override func configureUI() {
         backgroundColor = .clear
@@ -50,8 +43,14 @@ private extension SettingsControlPanel {
         if #available(iOS 13, *) {
             button.layer.cornerCurve = .continuous
         }
-        button.setTitle("SAVE", for: .normal)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitle(
+            "SAVE",
+            for: .normal
+        )
+        button.setTitleColor(
+            .black,
+            for: .normal
+        )
         button.titleLabel?.font = UIFont.systemFont(
             ofSize: 18,
             weight: .regular

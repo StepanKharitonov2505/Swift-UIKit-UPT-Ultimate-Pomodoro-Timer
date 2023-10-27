@@ -1,10 +1,3 @@
-//
-//  UPTTabItem.swift
-//  UPT Ultimate Pomodoro Timer
-//
-//  Created by  user on 12.10.2023.
-//
-
 import UIKit
 
 enum UPTTabItem: String, CaseIterable {
@@ -16,7 +9,7 @@ enum UPTTabItem: String, CaseIterable {
         case .timerScreen:
             return TimerScreenViewController()
         case .settingsScreen:
-            return SettingsViewController()
+            return SettingsScreenViewController()
         }
     }
     

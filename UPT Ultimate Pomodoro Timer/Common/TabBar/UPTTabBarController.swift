@@ -1,10 +1,3 @@
-//
-//  UPTTabBarController.swift
-//  UPT Ultimate Pomodoro Timer
-//
-//  Created by  user on 12.10.2023.
-//
-
 import UIKit
 import SnapKit
 
@@ -28,7 +21,10 @@ final class UPTTabBarController: UITabBarController {
 private extension UPTTabBarController {
     
     func loadTabBar() {
-        let tabItems: [UPTTabItem] = [.timerScreen, .settingsScreen]
+        let tabItems: [UPTTabItem] = [
+            .timerScreen,
+            .settingsScreen,
+        ]
         self.setupCustomTabBar(tabItems) { (controllers) in
             self.viewControllers = controllers
         }
@@ -38,8 +34,8 @@ private extension UPTTabBarController {
     
     func setupCustomTabBar(
         _ items: [UPTTabItem],
-        completion: @escaping ([UIViewController]
-        ) -> Void) {
+        completion: @escaping ([UIViewController]) -> Void
+    ) {
         let frame = CGRect(
             x: tabBar.frame.origin.x,
             y: tabBar.frame.origin.x,
@@ -58,14 +54,12 @@ private extension UPTTabBarController {
         self.customTabBar.translatesAutoresizingMaskIntoConstraints = false
         self.customTabBar.itemTapped = self.changeTab
         self.view.addSubview(customTabBar)
-
-        let leftRightOffset = self.tabBar.frame.width * NumericConstants.tabBarLateralPercentageIndentation
         
         self.customTabBar.snp.makeConstraints { make in
-            make.left.equalTo(tabBar.snp.left).offset(leftRightOffset)
-            make.right.equalTo(tabBar.snp.right).inset(leftRightOffset)
+            make.width.equalTo(tabBar.snp.width).multipliedBy(NumericConstants.tabBarWidthFactor)
             make.height.equalTo(NumericConstants.tabBarHeight)
             make.bottom.equalTo(tabBar.snp.bottom).inset(NumericConstants.tabBarBottomInset)
+            make.centerX.equalTo(tabBar.snp.centerX)
         }
         
         for i in 0 ..< items.count {
@@ -97,8 +91,8 @@ extension UPTTabBarController: UITabBarControllerDelegate {
 
 private extension UPTTabBarController {
     enum NumericConstants {
-        static let tabBarHeight: CGFloat = 80
+        static let tabBarHeight: CGFloat = 60
         static let tabBarBottomInset: CGFloat = 25
-        static let tabBarLateralPercentageIndentation: Double = 0.15
+        static let tabBarWidthFactor: Double = 0.7
     }
 }

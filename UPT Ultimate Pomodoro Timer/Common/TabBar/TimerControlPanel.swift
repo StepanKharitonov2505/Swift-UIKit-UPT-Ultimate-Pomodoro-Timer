@@ -1,10 +1,3 @@
-//
-//  TimerControlPanel.swift
-//  UPT Ultimate Pomodoro Timer
-//
-//  Created by  user on 12.10.2023.
-//
-
 import UIKit
 import SnapKit
 
@@ -18,7 +11,7 @@ final class TimerControlPanel: BaseControlPanel {
     private lazy var firstSeparator = makeSeparator()
     private lazy var secondSeparator = makeSeparator()
     
-    // MARK: - Override Methods
+    // MARK: - Override SuperMethods
 
     override func configureUI() {
         backgroundColor = .clear
@@ -98,7 +91,10 @@ private extension TimerControlPanel {
         if #available(iOS 13, *) {
             button.layer.cornerCurve = .continuous
         }
-        button.setImage(UIImage(systemName: "play"), for: .normal)
+        button.setImage(
+            UIImage(systemName: "play"),
+            for: .normal
+        )
         button.backgroundColor = .clear
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -111,7 +107,10 @@ private extension TimerControlPanel {
         if #available(iOS 13, *) {
             button.layer.cornerCurve = .continuous
         }
-        button.setImage(UIImage(systemName: "arrowshape.right"), for: .normal)
+        button.setImage(
+            UIImage(systemName: "arrowshape.right"),
+            for: .normal
+        )
         button.backgroundColor = .clear
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -124,7 +123,10 @@ private extension TimerControlPanel {
         if #available(iOS 13, *) {
             button.layer.cornerCurve = .continuous
         }
-        button.setImage(UIImage(systemName: "repeat.circle"), for: .normal)
+        button.setImage(
+            UIImage(systemName: "repeat.circle"),
+            for: .normal
+        )
         button.backgroundColor = .clear
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -137,7 +139,10 @@ private extension TimerControlPanel {
         if #available(iOS 13, *) {
             view.layer.cornerCurve = .continuous
         }
-        view.backgroundColor = ColorSet.controlPanelSeparatorColor
+        view.backgroundColor = ColorSet
+            .TabBarColors
+            .ControlPanelColors
+            .controlPanelSeparatorColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }
