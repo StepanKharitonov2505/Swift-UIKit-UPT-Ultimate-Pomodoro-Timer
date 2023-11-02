@@ -9,6 +9,17 @@ final class TimePickerSelectorLayout: TableLayout {
         return Int(currentTimeElementIndex)
     }
     
+    var scrollingNumber: Double? {
+        didSet {
+            if oldValue != scrollingNumber && scrollingNumber != nil {
+                if scrollingNumber?.truncatingRemainder(dividingBy: 2) != 0 && scrollingNumber! > 0 {
+                    let generator = UIImpactFeedbackGenerator(style: .light)
+                    generator.impactOccurred(intensity: 0.8)
+                }
+            }
+        }
+    }
+    
     private func updateCurrentTimeElementIndex() {
         currentTimeElementIndex = timeElementIndex(offset: collectionView!.contentOffset)
     }

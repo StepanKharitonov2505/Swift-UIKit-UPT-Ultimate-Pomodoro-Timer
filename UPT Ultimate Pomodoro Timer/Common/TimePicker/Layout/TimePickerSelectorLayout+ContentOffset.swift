@@ -15,6 +15,11 @@ extension TimePickerSelectorLayout {
         let cellWidth = itemSize.width
         let proposedCenterX = collectionView!.screenCenterXOffset(for: offset)
         let timeElementIndex = proposedCenterX / cellWidth
+        /// Для вибрации при скроллинге
+        /// Нужен дебаг, выполнить в низком приоритете
+//        let ratio = timeElementIndex / 0.5
+//        self.scrollingNumber = Double(ratio).rounded(.down)
+
         return timeElementIndex
     }
 }
