@@ -11,12 +11,12 @@ final class TimerScreenViewController: UIViewController, View {
     // MARK: - Private Properties
     
     private var disposeBag: DisposeBag! = DisposeBag()
-    private let customView = TimerScreenView()
+    private let timerView = TimerScreenView()
     
     // MARK: - Life Cycle
     
     override func loadView() {
-        self.view = customView
+        self.view = timerView
     }
     
     override func viewDidLoad() {
@@ -31,9 +31,9 @@ final class TimerScreenViewController: UIViewController, View {
         guard let viewModel = viewModel else { return }
 
         let input = TimerScreenViewModel.Input(
-            pressingPlayButton: customView.playPauseButton.rx.tap,
-            pressingNextButton: customView.nextButton.rx.tap,
-            pressingRefreshButton: customView.refreshButton.rx.tap,
+            pressingPlayButton: timerView.playPauseButton.rx.tap,
+            pressingNextButton: timerView.nextButton.rx.tap,
+            pressingRefreshButton: timerView.refreshButton.rx.tap,
             disposeBag: disposeBag
         )
         viewModel.transform(input, outputHandler: setupInput(input:))

@@ -45,7 +45,7 @@ private extension TimerScreenView {
     
     func setConstraint() {
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.snp.top).offset(70)
+            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(15)
             make.left.equalTo(self.snp.left).offset(25)
             make.right.equalTo(self.snp.right).inset(25)
         }
@@ -54,14 +54,14 @@ private extension TimerScreenView {
             make.left.equalTo(self.snp.left).offset(25)
             make.right.equalTo(self.snp.right).inset(25)
             make.top.equalTo(titleLabel.snp.bottom).offset(25)
-            make.bottom.equalTo(self.snp.bottom).inset(210)
+            make.bottom.equalTo(self.snp.bottom).inset(180)
         }
         
         buttonContainer.snp.makeConstraints { make in
             make.height.equalTo(60)
             make.width.equalTo(self.snp.width).multipliedBy(NumericConstants.widthFactor)
             make.centerX.equalTo(self.snp.centerX)
-            make.bottom.equalTo(self.snp.bottom).inset(100)
+            make.bottom.equalTo(self.snp.bottom).inset(95)
         }
         
         playPauseButton.snp.makeConstraints { make in
@@ -154,7 +154,10 @@ private extension TimerScreenView {
             UIImage(systemName: imageName),
             for: .normal
         )
-        button.backgroundColor = .white
+        button.backgroundColor = ColorSet.FoundationColors.actionButtonsColor
+//        button.backgroundColor = .clear
+//        button.layer.borderWidth = 1.5
+//        button.layer.borderColor = ColorSet.FoundationColors.actionButtonsColor.cgColor
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -178,7 +181,7 @@ private extension TimerScreenView {
     }
     
     enum NumericConstants {
-        static let cornerRadius: CGFloat = 15
+        static let cornerRadius: CGFloat = 20
         static let widthFactor: Double = 0.7
     }
     

@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		663AA148C61E47E64EF0F339 /* Pods_UPT_Ultimate_Pomodoro_Timer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AF82C48A81B8A9321F4092 /* Pods_UPT_Ultimate_Pomodoro_Timer.framework */; };
 		CE0108842AE93DD5004749C2 /* InteractiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0108832AE93DD5004749C2 /* InteractiveButton.swift */; };
+		CE01088B2AF1384C004749C2 /* UICollectionView+Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01088A2AF1384C004749C2 /* UICollectionView+Runtime.swift */; };
+		CE01088D2AF138E9004749C2 /* UIScrollView+CenterOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01088C2AF138E9004749C2 /* UIScrollView+CenterOffset.swift */; };
+		CE01088F2AF13C65004749C2 /* TableLayoutCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01088E2AF13C65004749C2 /* TableLayoutCache.swift */; };
+		CE0108932AF14070004749C2 /* TableLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0108922AF14070004749C2 /* TableLayout.swift */; };
+		CE0108952AF1472B004749C2 /* TimePickerElementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0108942AF1472B004749C2 /* TimePickerElementViewModel.swift */; };
+		CE0108972AF24DB3004749C2 /* TimePickerSelectorLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0108962AF24DB3004749C2 /* TimePickerSelectorLayout.swift */; };
+		CE0108992AF24EBF004749C2 /* TimePickerSelectorLayout+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0108982AF24EBF004749C2 /* TimePickerSelectorLayout+Scale.swift */; };
+		CE01089B2AF24F69004749C2 /* TimePickerSelectorLayout+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01089A2AF24F69004749C2 /* TimePickerSelectorLayout+Alignment.swift */; };
+		CE01089D2AF24FDA004749C2 /* TimePickerSelectorLayout+ContentOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01089C2AF24FDA004749C2 /* TimePickerSelectorLayout+ContentOffset.swift */; };
+		CE0108A02AF26032004749C2 /* TimePickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01089F2AF26032004749C2 /* TimePickerCollectionViewCell.swift */; };
 		CE19A82B2AD83EE6000B1920 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19A82A2AD83EE6000B1920 /* CustomTransition.swift */; };
 		CE19A82D2AD84200000B1920 /* TimerControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19A82C2AD84200000B1920 /* TimerControlPanel.swift */; };
 		CE19A82F2AD8420B000B1920 /* SettingsControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19A82E2AD8420B000B1920 /* SettingsControlPanel.swift */; };
@@ -46,6 +56,16 @@
 		90AF82C48A81B8A9321F4092 /* Pods_UPT_Ultimate_Pomodoro_Timer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UPT_Ultimate_Pomodoro_Timer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F33BF76689F2DB8CE07483C /* Pods-UPT Ultimate Pomodoro Timer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPT Ultimate Pomodoro Timer.debug.xcconfig"; path = "Target Support Files/Pods-UPT Ultimate Pomodoro Timer/Pods-UPT Ultimate Pomodoro Timer.debug.xcconfig"; sourceTree = "<group>"; };
 		CE0108832AE93DD5004749C2 /* InteractiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveButton.swift; sourceTree = "<group>"; };
+		CE01088A2AF1384C004749C2 /* UICollectionView+Runtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Runtime.swift"; sourceTree = "<group>"; };
+		CE01088C2AF138E9004749C2 /* UIScrollView+CenterOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+CenterOffset.swift"; sourceTree = "<group>"; };
+		CE01088E2AF13C65004749C2 /* TableLayoutCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableLayoutCache.swift; sourceTree = "<group>"; };
+		CE0108922AF14070004749C2 /* TableLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableLayout.swift; sourceTree = "<group>"; };
+		CE0108942AF1472B004749C2 /* TimePickerElementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerElementViewModel.swift; sourceTree = "<group>"; };
+		CE0108962AF24DB3004749C2 /* TimePickerSelectorLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerSelectorLayout.swift; sourceTree = "<group>"; };
+		CE0108982AF24EBF004749C2 /* TimePickerSelectorLayout+Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimePickerSelectorLayout+Scale.swift"; sourceTree = "<group>"; };
+		CE01089A2AF24F69004749C2 /* TimePickerSelectorLayout+Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimePickerSelectorLayout+Alignment.swift"; sourceTree = "<group>"; };
+		CE01089C2AF24FDA004749C2 /* TimePickerSelectorLayout+ContentOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimePickerSelectorLayout+ContentOffset.swift"; sourceTree = "<group>"; };
+		CE01089F2AF26032004749C2 /* TimePickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE19A82A2AD83EE6000B1920 /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		CE19A82C2AD84200000B1920 /* TimerControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControlPanel.swift; sourceTree = "<group>"; };
 		CE19A82E2AD8420B000B1920 /* SettingsControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsControlPanel.swift; sourceTree = "<group>"; };
@@ -124,6 +144,45 @@
 			path = PieChart;
 			sourceTree = "<group>";
 		};
+		CE0108892AF13719004749C2 /* TimePicker */ = {
+			isa = PBXGroup;
+			children = (
+				CE0108912AF13CA7004749C2 /* Models */,
+				CE01089E2AF25FE9004749C2 /* Cells */,
+				CE0108902AF13C85004749C2 /* Layout */,
+			);
+			path = TimePicker;
+			sourceTree = "<group>";
+		};
+		CE0108902AF13C85004749C2 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				CE0108922AF14070004749C2 /* TableLayout.swift */,
+				CE0108962AF24DB3004749C2 /* TimePickerSelectorLayout.swift */,
+				CE0108982AF24EBF004749C2 /* TimePickerSelectorLayout+Scale.swift */,
+				CE01089A2AF24F69004749C2 /* TimePickerSelectorLayout+Alignment.swift */,
+				CE01089C2AF24FDA004749C2 /* TimePickerSelectorLayout+ContentOffset.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		CE0108912AF13CA7004749C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE01088E2AF13C65004749C2 /* TableLayoutCache.swift */,
+				CE0108942AF1472B004749C2 /* TimePickerElementViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE01089E2AF25FE9004749C2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE01089F2AF26032004749C2 /* TimePickerCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		CE19A8282AD83E82000B1920 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +258,7 @@
 		CE3625372AD6BF2900D4F470 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE0108892AF13719004749C2 /* TimePicker */,
 				CE0108862AEAA56A004749C2 /* PieChart */,
 				CE0108822AE93D9F004749C2 /* Controls */,
 				CE19A8352AD937A4000B1920 /* Base */,
@@ -266,6 +326,8 @@
 			isa = PBXGroup;
 			children = (
 				CEFAC44C2AD811C800087CC5 /* UIColor+Extension.swift */,
+				CE01088A2AF1384C004749C2 /* UICollectionView+Runtime.swift */,
+				CE01088C2AF138E9004749C2 /* UIScrollView+CenterOffset.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -410,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3625432AD6C20B00D4F470 /* View.swift in Sources */,
+				CE0108952AF1472B004749C2 /* TimePickerElementViewModel.swift in Sources */,
 				CE36253E2AD6C14900D4F470 /* TimerScreenViewModel.swift in Sources */,
 				CEFAC4442AD8024F00087CC5 /* UPTTabItem.swift in Sources */,
 				CE3625252AD6BBCE00D4F470 /* TimerScreenViewController.swift in Sources */,
@@ -423,10 +486,19 @@
 				CE19A82B2AD83EE6000B1920 /* CustomTransition.swift in Sources */,
 				CEFAC44A2AD8116C00087CC5 /* ColorSet.swift in Sources */,
 				CEFAC44D2AD811C800087CC5 /* UIColor+Extension.swift in Sources */,
+				CE01088B2AF1384C004749C2 /* UICollectionView+Runtime.swift in Sources */,
 				CE36253C2AD6C13D00D4F470 /* TimerScreenView.swift in Sources */,
+				CE0108972AF24DB3004749C2 /* TimePickerSelectorLayout.swift in Sources */,
 				CE3625232AD6BBCE00D4F470 /* SceneDelegate.swift in Sources */,
 				CE36254A2AD6D7B300D4F470 /* UPTTabBarProtocol.swift in Sources */,
+				CE0108932AF14070004749C2 /* TableLayout.swift in Sources */,
+				CE0108A02AF26032004749C2 /* TimePickerCollectionViewCell.swift in Sources */,
 				CE3625412AD6C1AC00D4F470 /* ViewModel.swift in Sources */,
+				CE0108992AF24EBF004749C2 /* TimePickerSelectorLayout+Scale.swift in Sources */,
+				CE01089D2AF24FDA004749C2 /* TimePickerSelectorLayout+ContentOffset.swift in Sources */,
+				CE01088F2AF13C65004749C2 /* TableLayoutCache.swift in Sources */,
+				CE01088D2AF138E9004749C2 /* UIScrollView+CenterOffset.swift in Sources */,
+				CE01089B2AF24F69004749C2 /* TimePickerSelectorLayout+Alignment.swift in Sources */,
 				CE3625462AD6D3F800D4F470 /* SettingsScreenViewController.swift in Sources */,
 				CE19A8392AD94E83000B1920 /* SettingsScreenView.swift in Sources */,
 			);

@@ -254,7 +254,7 @@ private extension UPTTabBar {
 
 private extension UPTTabBar {
     enum NumericContants {
-        static let cornerRadius: CGFloat = 15
+        static let cornerRadius: CGFloat = 20
         static let minHeightControlPanel: CGFloat = 80
         static let maxHeightControlPanel: CGFloat = 160
         static let sizeImageTabItem: CGFloat = 30

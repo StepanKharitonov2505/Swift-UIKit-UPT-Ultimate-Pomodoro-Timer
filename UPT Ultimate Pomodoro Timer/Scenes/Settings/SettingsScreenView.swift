@@ -6,11 +6,13 @@ final class SettingsScreenView: UIView {
     // MARK: - Public Properties
     
     public lazy var saveButton = makeSaveButton()
+    public lazy var timePickerCollectionView = makeTimePickerCollection()
     
     // MARK: - Private Properties
     
     private lazy var titleLabel = makeTitleLabel()
     private lazy var settingsTable = makeSettingsTable()
+    
     
     // MARK: - Init
     
@@ -33,28 +35,36 @@ private extension SettingsScreenView {
     func configureUI() {
         backgroundColor = ColorSet.FoundationColors.mainBackgroundColor
         addSubview(titleLabel)
-        addSubview(settingsTable)
+        addSubview(timePickerCollectionView)
+        //addSubview(settingsTable)
         addSubview(saveButton)
     }
     
     func setConstraint() {
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.snp.top).offset(70)
+            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(15)
             make.left.equalTo(self.snp.left).offset(26)
             make.right.equalTo(self.snp.right).inset(26)
         }
         
-        settingsTable.snp.makeConstraints { make in
-            make.left.equalTo(self.snp.left).offset(25)
-            make.right.equalTo(self.snp.right).inset(25)
-            make.top.equalTo(titleLabel.snp.bottom).offset(25)
-            make.bottom.equalTo(self.snp.bottom).inset(210)
+        timePickerCollectionView.snp.makeConstraints { make in
+            make.height.equalTo(60)
+            make.top.equalTo(titleLabel.snp.bottom).offset(65)
+            make.left.equalTo(self.snp.left)
+            make.right.equalTo(self.snp.right)
         }
+        
+//        settingsTable.snp.makeConstraints { make in
+//            make.left.equalTo(self.snp.left).offset(25)
+//            make.right.equalTo(self.snp.right).inset(25)
+//            make.top.equalTo(titleLabel.snp.bottom).offset(25)
+//            make.bottom.equalTo(self.snp.bottom).inset(180)
+//        }
         
         saveButton.snp.makeConstraints { make in
             make.width.equalTo(self.snp.width).multipliedBy(NumericConstants.widthFactor)
             make.centerX.equalTo(self.snp.centerX)
-            make.bottom.equalTo(self.snp.bottom).inset(100)
+            make.bottom.equalTo(self.snp.bottom).inset(95)
             make.height.equalTo(60)
         }
     }
@@ -113,10 +123,27 @@ private extension SettingsScreenView {
             ofSize: 18,
             weight: .regular
         )
-        button.backgroundColor = .white
+        button.backgroundColor = ColorSet.FoundationColors.actionButtonsColor
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
+    }
+    
+    func makeTimePickerCollection() -> UICollectionView {
+        let collection = UICollectionView.init(
+            frame: CGRect(origin: .zero, size: CGSize(
+                width: self.bounds.width,
+                height: 60
+            )),
+            collectionViewLayout: TimePickerSelectorLayout()
+        )
+        collection.decelerationRate = .fast
+        collection.isScrollEnabled = true
+        collection.backgroundColor = .clear
+        collection.showsVerticalScrollIndicator = false
+        collection.showsHorizontalScrollIndicator = false
+        collection.translatesAutoresizingMaskIntoConstraints = false
+        return collection
     }
 }
 
@@ -124,7 +151,7 @@ private extension SettingsScreenView {
 
 private extension SettingsScreenView {
     enum NumericConstants {
-        static let cornerRadius: CGFloat = 15
+        static let cornerRadius: CGFloat = 20
         static let edgesIndentation: CGFloat = 5
         static let widthFactor: Double = 0.7
     }

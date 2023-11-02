@@ -14,8 +14,9 @@ enum ColorSet {
     }
     
     enum FoundationColors {
-        static let mainBackgroundColor: UIColor = UIColor.rgb(54, 48, 98)
-        static let titleColor: UIColor = UIColor.rgb(234, 244, 255)
+        static let mainBackgroundColor: UIColor = UIColor.rgb(33, 29, 63)
+        static let titleColor: UIColor = UIColor.rgb(255, 255, 255)
+        static let actionButtonsColor: UIColor = UIColor.rgb(246, 249, 228)
     }
     
     enum TimerScreenElementsColors {
