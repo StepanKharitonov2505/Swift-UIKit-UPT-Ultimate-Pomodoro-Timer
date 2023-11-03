@@ -3,21 +3,22 @@ import UIKit
 final class TimePickerSelectorLayout: TableLayout {
     
     // MARK: - Pizza index
-    var currentTimeElementIndex: CGFloat = 0
-    
-    var currentTimeElementIndexInt: Int {
-        return Int(currentTimeElementIndex)
-    }
-    
-    var scrollingNumber: Double? {
+    var currentTimeElementIndex: CGFloat = 0 {
         didSet {
-            if oldValue != scrollingNumber && scrollingNumber != nil {
-                if scrollingNumber?.truncatingRemainder(dividingBy: 2) != 0 && scrollingNumber! > 0 {
+            if currentTimeElementIndex != CGFloat.infinity {
+                let ratio = Double(currentTimeElementIndex).rounded(.down)
+                let oldratio = Double(oldValue).rounded(.down)
+                
+                if ratio != oldratio {
                     let generator = UIImpactFeedbackGenerator(style: .light)
                     generator.impactOccurred(intensity: 0.8)
                 }
             }
         }
+    }
+    
+    var currentTimeElementIndexInt: Int {
+        return Int(currentTimeElementIndex)
     }
     
     private func updateCurrentTimeElementIndex() {
@@ -64,8 +65,6 @@ final class TimePickerSelectorLayout: TableLayout {
             animateBackwardScroll(to: timeElementIndex)
             return collectionView!.contentOffset // Stop scroll, we've animated manually
         }
-//        let generator = UIImpactFeedbackGenerator(style: .light)
-//        generator.impactOccurred()
         
         return projectedOffset
     }
@@ -73,8 +72,6 @@ final class TimePickerSelectorLayout: TableLayout {
     /// A bit of magic. Without that, high velocity moves cells backward very fast.
     /// We slow down the animation
     private func animateBackwardScroll(to timeElementIndex: Int) {
-//        let generator = UIImpactFeedbackGenerator(style: .light)
-//        generator.impactOccurred()
         let path = IndexPath(
             row: timeElementIndex,
             section: 0

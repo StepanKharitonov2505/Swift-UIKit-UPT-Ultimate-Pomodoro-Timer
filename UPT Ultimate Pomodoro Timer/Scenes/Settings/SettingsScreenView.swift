@@ -53,7 +53,7 @@ private extension SettingsScreenView {
         
         timePickerCollectionView.snp.makeConstraints { make in
             make.height.equalTo(60)
-            make.top.equalTo(subtitleWorkingPeriod.snp.bottom).offset(10)
+            make.top.equalTo(subtitleWorkingPeriod.snp.bottom).offset(15)
             make.left.equalTo(self.snp.left)
             make.right.equalTo(self.snp.right)
         }
