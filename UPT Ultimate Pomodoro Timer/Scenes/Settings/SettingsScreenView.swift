@@ -11,8 +11,7 @@ final class SettingsScreenView: UIView {
     // MARK: - Private Properties
     
     private lazy var titleLabel = makeTitleLabel()
-    private lazy var settingsTable = makeSettingsTable()
-    
+    private lazy var subtitleWorkingPeriod = makeSubtitleLabel(text: "Working period time")
     
     // MARK: - Init
     
@@ -35,8 +34,8 @@ private extension SettingsScreenView {
     func configureUI() {
         backgroundColor = ColorSet.FoundationColors.mainBackgroundColor
         addSubview(titleLabel)
+        addSubview(subtitleWorkingPeriod)
         addSubview(timePickerCollectionView)
-        //addSubview(settingsTable)
         addSubview(saveButton)
     }
     
@@ -47,19 +46,17 @@ private extension SettingsScreenView {
             make.right.equalTo(self.snp.right).inset(26)
         }
         
+        subtitleWorkingPeriod.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(30)
+            make.left.equalTo(self.snp.left).offset(28)
+        }
+        
         timePickerCollectionView.snp.makeConstraints { make in
             make.height.equalTo(60)
-            make.top.equalTo(titleLabel.snp.bottom).offset(65)
+            make.top.equalTo(subtitleWorkingPeriod.snp.bottom).offset(10)
             make.left.equalTo(self.snp.left)
             make.right.equalTo(self.snp.right)
         }
-        
-//        settingsTable.snp.makeConstraints { make in
-//            make.left.equalTo(self.snp.left).offset(25)
-//            make.right.equalTo(self.snp.right).inset(25)
-//            make.top.equalTo(titleLabel.snp.bottom).offset(25)
-//            make.bottom.equalTo(self.snp.bottom).inset(180)
-//        }
         
         saveButton.snp.makeConstraints { make in
             make.width.equalTo(self.snp.width).multipliedBy(NumericConstants.widthFactor)
@@ -89,20 +86,17 @@ private extension SettingsScreenView {
         return label
     }
     
-    func makeSettingsTable() -> UIView {
-        let view = UIView()
-        view.layer.cornerRadius = 20
-        if #available(iOS 13, *) {
-            view.layer.cornerCurve = .continuous
-        }
-        view.backgroundColor = .clear
-        view.layer.borderColor = ColorSet
-            .TabBarColors
-            .ControlPanelColors
-            .controlPanelSeparatorColor
-            .cgColor
-        view.layer.borderWidth = 1
-        return view
+    func makeSubtitleLabel(text: String) -> UILabel {
+        let label = UILabel()
+        label.font = UIFont(
+            name: StrokeConstants.FontsNames.subtitleFontName,
+            size: 20
+        )
+        label.text = text
+        label.numberOfLines = 1
+        label.lineBreakMode = .byWordWrapping
+        label.textColor = UIColor.rgb(234, 244, 255)
+        return label
     }
     
     func makeSaveButton() -> InteractiveButton {
@@ -163,6 +157,7 @@ private extension SettingsScreenView {
         enum FontsNames {
             static let titleFontName: String = "Montserrat-Medium"
             static let timerNumberFontName: String = "Montserrat-ExtraLight"
+            static let subtitleFontName: String = "Montserrat-Light"
         }
     }
 }

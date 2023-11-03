@@ -36,9 +36,10 @@ final class TimePickerSelectorLayout: TableLayout {
     }
     
     private func setupInsets(timeElementSize: CGFloat){
-        let width = collectionView!.bounds.width
+        guard let collection = collectionView else { return }
+        let width = collection.bounds.width
         let newInset = (width - timeElementSize) / 2
-        collectionView!.contentInset = UIEdgeInsets(
+        collection.contentInset = UIEdgeInsets(
             top: 0,
             left: newInset,
             bottom: 0,
