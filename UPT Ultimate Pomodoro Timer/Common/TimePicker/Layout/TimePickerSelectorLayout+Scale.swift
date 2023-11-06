@@ -2,14 +2,14 @@ import UIKit
 
 extension TimePickerSelectorLayout {
     
-    func scale(for element: Int) -> CGFloat {
+    func scale(for element: Int, criticalOffset: CGFloat) -> CGFloat {
         let frame = cache.defaultCellFrame(atElements: element)
-        let scale = self.scale(for: frame)
+        let scale = self.scale(for: frame, criticalOffset: criticalOffset)
         return scale.normalized
     }
     
-    func scale(for frame: CGRect) -> CGFloat {
-        let criticalOffset = TimePickerSelectorLayout.criticalOffsetFromCenter // 200 pt
+    func scale(for frame: CGRect, criticalOffset: CGFloat) -> CGFloat {
+        let criticalOffset = criticalOffset // 200 pt
         let centerOffset = offsetFromScreenCenter(frame)
         let relativeOffset = centerOffset / criticalOffset
         return relativeOffset

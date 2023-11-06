@@ -11,7 +11,7 @@ final class TimePickerSelectorLayout: TableLayout {
                 
                 if ratio != oldratio {
                     let generator = UIImpactFeedbackGenerator(style: .light)
-                    generator.impactOccurred(intensity: 0.8)
+                    generator.impactOccurred(intensity: 0.65)
                 }
             }
         }
@@ -109,8 +109,11 @@ final class TimePickerSelectorLayout: TableLayout {
         return cells
     }
 
-    static let criticalOffsetFromCenter: CGFloat = 200
-    static private let scaleFactor: CGFloat = 0.6
+    static let criticalOffsetFromCenter: CGFloat = 50
+    static private let scaleFactor: CGFloat = 0.2
+    
+    static let criticalOffsetAlphaFromCenter: CGFloat = 200
+    static private let alphaFactor: CGFloat = 1.0
     
     var spaceBetweenHalves: CGFloat = 4
 }
@@ -120,13 +123,16 @@ extension TimePickerSelectorLayout {
     
     private func updateCells(_ cells: [UICollectionViewLayoutAttributes]) {
         for cell in cells {
-            let normScale = scale(for: cell.indexPath.row)
-            let scale = 1 - TimePickerSelectorLayout.scaleFactor * abs(normScale)
+            let normScale = scale(for: cell.indexPath.row, criticalOffset: TimePickerSelectorLayout.criticalOffsetFromCenter)
+            let scaleSize = 1 - TimePickerSelectorLayout.scaleFactor * abs(normScale)
             
-            cell.alpha = scale
+            let normScaleAlpha = scale(for: cell.indexPath.row, criticalOffset: TimePickerSelectorLayout.criticalOffsetAlphaFromCenter)
+            let scaleAlpha = 1 - TimePickerSelectorLayout.alphaFactor * abs(normScaleAlpha)
+            
+            cell.alpha = scaleAlpha
             cell.transform = CGAffineTransform(
-                scaleX: scale,
-                y: scale
+                scaleX: scaleSize,
+                y: scaleSize
             )
             cell.zIndex = cellZLevel
         }

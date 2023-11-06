@@ -6,12 +6,16 @@ final class SettingsScreenView: UIView {
     // MARK: - Public Properties
     
     public lazy var saveButton = makeSaveButton()
-    public lazy var timePickerCollectionView = makeTimePickerCollection()
+    public lazy var workingPeriodTimePicker = makeTimePickerCollection()
+    public lazy var shortBreakTimePicker = makeTimePickerCollection()
+    public lazy var longBreakTimePicker = makeTimePickerCollection()
     
     // MARK: - Private Properties
     
     private lazy var titleLabel = makeTitleLabel()
     private lazy var subtitleWorkingPeriod = makeSubtitleLabel(text: "Working period time")
+    private lazy var subtitleShortBreak = makeSubtitleLabel(text: "Short break time")
+    private lazy var subtitleLongBreak = makeSubtitleLabel(text: "Long break time")
     
     // MARK: - Init
     
@@ -35,7 +39,11 @@ private extension SettingsScreenView {
         backgroundColor = ColorSet.FoundationColors.mainBackgroundColor
         addSubview(titleLabel)
         addSubview(subtitleWorkingPeriod)
-        addSubview(timePickerCollectionView)
+        addSubview(subtitleShortBreak)
+        addSubview(subtitleLongBreak)
+        addSubview(workingPeriodTimePicker)
+        addSubview(shortBreakTimePicker)
+        addSubview(longBreakTimePicker)
         addSubview(saveButton)
     }
     
@@ -51,9 +59,33 @@ private extension SettingsScreenView {
             make.left.equalTo(self.snp.left).offset(28)
         }
         
-        timePickerCollectionView.snp.makeConstraints { make in
+        workingPeriodTimePicker.snp.makeConstraints { make in
             make.height.equalTo(60)
             make.top.equalTo(subtitleWorkingPeriod.snp.bottom).offset(15)
+            make.left.equalTo(self.snp.left)
+            make.right.equalTo(self.snp.right)
+        }
+        
+        subtitleShortBreak.snp.makeConstraints { make in
+            make.top.equalTo(workingPeriodTimePicker.snp.bottom).offset(25)
+            make.left.equalTo(self.snp.left).offset(28)
+        }
+        
+        shortBreakTimePicker.snp.makeConstraints { make in
+            make.height.equalTo(60)
+            make.top.equalTo(subtitleShortBreak.snp.bottom).offset(15)
+            make.left.equalTo(self.snp.left)
+            make.right.equalTo(self.snp.right)
+        }
+        
+        subtitleLongBreak.snp.makeConstraints { make in
+            make.top.equalTo(shortBreakTimePicker.snp.bottom).offset(25)
+            make.left.equalTo(self.snp.left).offset(28)
+        }
+        
+        longBreakTimePicker.snp.makeConstraints { make in
+            make.height.equalTo(60)
+            make.top.equalTo(subtitleLongBreak.snp.bottom).offset(15)
             make.left.equalTo(self.snp.left)
             make.right.equalTo(self.snp.right)
         }

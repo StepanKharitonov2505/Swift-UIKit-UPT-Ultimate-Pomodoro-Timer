@@ -12,7 +12,8 @@ final class SettingsScreenViewController: UIViewController {
     
     private let settingsView = SettingsScreenView()
     
-    var timeElements: [TimePickerElementViewModel] = [
+    /// МОК ДАННЫЕ ДЛЯ UI теста
+    var workingPeriodTimeElements: [TimePickerElementViewModel] = [
         TimePickerElementViewModel(timeSize: 20),
         TimePickerElementViewModel(timeSize: 21),
         TimePickerElementViewModel(timeSize: 22),
@@ -31,8 +32,31 @@ final class SettingsScreenViewController: UIViewController {
         TimePickerElementViewModel(timeSize: 35),
     ]
     
+    var shortBreakTimeElements: [TimePickerElementViewModel] = [
+        TimePickerElementViewModel(timeSize: 5),
+        TimePickerElementViewModel(timeSize: 6),
+        TimePickerElementViewModel(timeSize: 7),
+        TimePickerElementViewModel(timeSize: 8),
+        TimePickerElementViewModel(timeSize: 9),
+        TimePickerElementViewModel(timeSize: 10),
+    ]
+    
+    var longBreakTimeElements: [TimePickerElementViewModel] = [
+        TimePickerElementViewModel(timeSize: 20),
+        TimePickerElementViewModel(timeSize: 21),
+        TimePickerElementViewModel(timeSize: 22),
+        TimePickerElementViewModel(timeSize: 23),
+        TimePickerElementViewModel(timeSize: 24),
+        TimePickerElementViewModel(timeSize: 25),
+        TimePickerElementViewModel(timeSize: 26),
+        TimePickerElementViewModel(timeSize: 27),
+        TimePickerElementViewModel(timeSize: 28),
+        TimePickerElementViewModel(timeSize: 29),
+        TimePickerElementViewModel(timeSize: 30),
+    ]
+    
     private var timePickerLayout: TimePickerSelectorLayout {
-        return settingsView.timePickerCollectionView.collectionViewLayout as! TimePickerSelectorLayout
+        return settingsView.workingPeriodTimePicker.collectionViewLayout as! TimePickerSelectorLayout
     }
     
     // MARK: - Life Cycle
@@ -43,16 +67,32 @@ final class SettingsScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        settingsView.timePickerCollectionView.delegate = self
-        settingsView.timePickerCollectionView.dataSource = self
-        settingsView.timePickerCollectionView.register(TimePickerCollectionViewCell.self, forCellWithReuseIdentifier: "timePickerCell")
+        settingsView.workingPeriodTimePicker.delegate = self
+        settingsView.workingPeriodTimePicker.dataSource = self
+        settingsView.workingPeriodTimePicker.register(TimePickerCollectionViewCell.self, forCellWithReuseIdentifier: "timePickerCell")
+        
+        settingsView.shortBreakTimePicker.delegate = self
+        settingsView.shortBreakTimePicker.dataSource = self
+        settingsView.shortBreakTimePicker.register(TimePickerCollectionViewCell.self, forCellWithReuseIdentifier: "timePickerCell")
+        
+        settingsView.longBreakTimePicker.delegate = self
+        settingsView.longBreakTimePicker.dataSource = self
+        settingsView.longBreakTimePicker.register(TimePickerCollectionViewCell.self, forCellWithReuseIdentifier: "timePickerCell")
         
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if let layout = settingsView.timePickerCollectionView.collectionViewLayout as? TimePickerSelectorLayout {
+        if let layout = settingsView.workingPeriodTimePicker.collectionViewLayout as? TimePickerSelectorLayout {
             layout.setupSizeAndInsets(timeElementSize: 50)
+        }
+        
+        if let layoutShort = settingsView.shortBreakTimePicker.collectionViewLayout as? TimePickerSelectorLayout {
+            layoutShort.setupSizeAndInsets(timeElementSize: 50)
+        }
+        
+        if let layoutLong = settingsView.longBreakTimePicker.collectionViewLayout as? TimePickerSelectorLayout {
+            layoutLong.setupSizeAndInsets(timeElementSize: 50)
         }
     }
 }
@@ -62,7 +102,7 @@ final class SettingsScreenViewController: UIViewController {
 extension SettingsScreenViewController: UICollectionViewDelegate {
     func scroll(to timeElementIndex: Int, animated: Bool = true) {
         let offset = timePickerLayout.contentOffset(for: timeElementIndex)
-        settingsView.timePickerCollectionView.setContentOffset(offset, animated: animated)
+        settingsView.workingPeriodTimePicker.setContentOffset(offset, animated: animated)
     }
 }
 
@@ -75,7 +115,19 @@ extension SettingsScreenViewController: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return timeElements.count
+        if collectionView == settingsView.workingPeriodTimePicker {
+            return workingPeriodTimeElements.count
+        }
+        
+        if collectionView == settingsView.shortBreakTimePicker {
+            return shortBreakTimeElements.count
+        }
+        
+        if collectionView == settingsView.longBreakTimePicker {
+            return longBreakTimeElements.count
+        }
+        
+        return 0
     }
     
     func collectionView(
@@ -85,8 +137,20 @@ extension SettingsScreenViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "timePickerCell", for: indexPath) as? TimePickerCollectionViewCell else {
             return UICollectionViewCell()
         }
-        let timeElementsModel = timeElements[indexPath.row]
-        cell.timePickerElement = timeElementsModel
+        if collectionView == settingsView.workingPeriodTimePicker {
+            let timeElementsModel = workingPeriodTimeElements[indexPath.row]
+            cell.timePickerElement = timeElementsModel
+        }
+        
+        if collectionView == settingsView.shortBreakTimePicker {
+            let timeElementsModel = shortBreakTimeElements[indexPath.row]
+            cell.timePickerElement = timeElementsModel
+        }
+        
+        if collectionView == settingsView.longBreakTimePicker {
+            let timeElementsModel = longBreakTimeElements[indexPath.row]
+            cell.timePickerElement = timeElementsModel
+        }
         
         return cell
     }
