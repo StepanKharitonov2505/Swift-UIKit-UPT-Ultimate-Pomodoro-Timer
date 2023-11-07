@@ -78,11 +78,9 @@ final class SettingsScreenViewController: UIViewController {
         settingsView.longBreakTimePicker.delegate = self
         settingsView.longBreakTimePicker.dataSource = self
         settingsView.longBreakTimePicker.register(TimePickerCollectionViewCell.self, forCellWithReuseIdentifier: "timePickerCell")
-        
-        
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
+
+    override func viewDidLayoutSubviews() {
         if let layout = settingsView.workingPeriodTimePicker.collectionViewLayout as? TimePickerSelectorLayout {
             layout.setupSizeAndInsets(timeElementSize: 50)
         }
@@ -94,15 +92,31 @@ final class SettingsScreenViewController: UIViewController {
         if let layoutLong = settingsView.longBreakTimePicker.collectionViewLayout as? TimePickerSelectorLayout {
             layoutLong.setupSizeAndInsets(timeElementSize: 50)
         }
+        
+//        settingsView.workingPeriodTimePicker.scrollToItem(
+//            at: IndexPath(row: 0, section: 0),
+//            at: .centeredHorizontally,
+//            animated: false
+//        )
+//        settingsView.shortBreakTimePicker.scrollToItem(
+//            at: IndexPath(row: 0, section: 0),
+//            at: .centeredHorizontally,
+//            animated: false
+//        )
+//        settingsView.longBreakTimePicker.scrollToItem(
+//            at: IndexPath(row: 0, section: 0),
+//            at: .centeredHorizontally,
+//            animated: false
+//        )
     }
 }
 
 // MARK: - Private Methods
 
 extension SettingsScreenViewController: UICollectionViewDelegate {
-    func scroll(to timeElementIndex: Int, animated: Bool = true) {
+    func scrollTimePicker(_ collectionView: UICollectionView ,to timeElementIndex: Int, animated: Bool = true) {
         let offset = timePickerLayout.contentOffset(for: timeElementIndex)
-        settingsView.workingPeriodTimePicker.setContentOffset(offset, animated: animated)
+        collectionView.setContentOffset(offset, animated: animated)
     }
 }
 
