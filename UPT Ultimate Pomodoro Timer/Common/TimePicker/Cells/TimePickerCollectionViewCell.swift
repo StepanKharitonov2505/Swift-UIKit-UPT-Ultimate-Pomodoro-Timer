@@ -9,6 +9,12 @@ class TimePickerCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    var selectionType: TimePickerCellSelectedType = .unselect {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    
     // MARK: - Private Properties
     
     private lazy var timeLabel = makeTimeLabel()
@@ -23,6 +29,21 @@ class TimePickerCollectionViewCell: UICollectionViewCell {
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        substrateTimeLabel.layer.borderColor = UIColor.clear.cgColor
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if selectionType == .select {
+            UIView.animate(withDuration: 0.25) { [weak self] in
+                self?.substrateTimeLabel.layer.borderColor = UIColor.rgb(246, 249, 228).cgColor
+            }
+        } else {
+            substrateTimeLabel.layer.borderColor = UIColor.clear.cgColor
+        }
     }
 }
 
@@ -69,6 +90,8 @@ private extension TimePickerCollectionViewCell {
         if #available(iOS 13, *) {
             view.layer.cornerCurve = .continuous
         }
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.clear.cgColor
         return view
     }
 }

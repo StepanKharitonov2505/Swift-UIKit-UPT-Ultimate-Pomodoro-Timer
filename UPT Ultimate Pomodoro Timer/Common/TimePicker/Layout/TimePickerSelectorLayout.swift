@@ -1,6 +1,10 @@
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class TimePickerSelectorLayout: TableLayout {
+    
+    let timeElementRelay = PublishRelay<CGFloat>()
     
     // MARK: - Pizza index
     var currentTimeElementIndex: CGFloat = 0 {
@@ -8,10 +12,10 @@ final class TimePickerSelectorLayout: TableLayout {
             if currentTimeElementIndex != CGFloat.infinity {
                 let ratio = Double(currentTimeElementIndex).rounded(.down)
                 let oldratio = Double(oldValue).rounded(.down)
-                
+                timeElementRelay.accept(currentTimeElementIndex)
                 if ratio != oldratio {
                     let generator = UIImpactFeedbackGenerator(style: .light)
-                    generator.impactOccurred(intensity: 0.65)
+                    generator.impactOccurred(intensity: 0.6)
                 }
             }
         }

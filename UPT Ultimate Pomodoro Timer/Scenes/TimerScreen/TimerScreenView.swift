@@ -58,10 +58,10 @@ private extension TimerScreenView {
         }
         
         buttonContainer.snp.makeConstraints { make in
-            make.height.equalTo(60)
+            make.height.equalTo(55)
             make.width.equalTo(self.snp.width).multipliedBy(NumericConstants.widthFactor)
             make.centerX.equalTo(self.snp.centerX)
-            make.bottom.equalTo(self.snp.bottom).inset(95)
+            make.bottom.equalTo(self.snp.bottom).inset(90)
         }
         
         playPauseButton.snp.makeConstraints { make in
@@ -115,7 +115,7 @@ private extension TimerScreenView {
             string: StrokeConstants.screenTitle,
             attributes: [NSAttributedString.Key.kern: 4.5]
         )
-        label.textColor = UIColor.rgb(234, 244, 255)
+        label.textColor = ColorSet.FoundationColors.titleColor
         return label
     }
     
@@ -155,9 +155,9 @@ private extension TimerScreenView {
             for: .normal
         )
         button.backgroundColor = ColorSet.FoundationColors.actionButtonsColor
-//        button.backgroundColor = .clear
-//        button.layer.borderWidth = 1.5
-//        button.layer.borderColor = ColorSet.FoundationColors.actionButtonsColor.cgColor
+        /*button.backgroundColor = .clear
+        button.layer.borderWidth = 1.5
+        button.layer.borderColor = ColorSet.FoundationColors.actionButtonsColor.cgColor*/
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -167,6 +167,7 @@ private extension TimerScreenView {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.spacing = 5
+        stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }
 }

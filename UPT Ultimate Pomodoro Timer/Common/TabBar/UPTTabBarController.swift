@@ -54,11 +54,13 @@ private extension UPTTabBarController {
         self.customTabBar.translatesAutoresizingMaskIntoConstraints = false
         self.customTabBar.itemTapped = self.changeTab
         self.view.addSubview(customTabBar)
+
+        let tabBarBottomOffset = CheckSmallScreen.isSmallScreen() ? NumericConstants.tabBarBottomInsetSmallScreen : NumericConstants.tabBarBottomInset
         
         self.customTabBar.snp.makeConstraints { make in
             make.width.equalTo(tabBar.snp.width).multipliedBy(NumericConstants.tabBarWidthFactor)
             make.height.equalTo(NumericConstants.tabBarHeight)
-            make.bottom.equalTo(tabBar.snp.bottom).inset(NumericConstants.tabBarBottomInset)
+            make.bottom.equalTo(tabBar.snp.bottom).inset(tabBarBottomOffset)
             make.centerX.equalTo(tabBar.snp.centerX)
         }
         
@@ -91,8 +93,9 @@ extension UPTTabBarController: UITabBarControllerDelegate {
 
 private extension UPTTabBarController {
     enum NumericConstants {
-        static let tabBarHeight: CGFloat = 60
+        static let tabBarHeight: CGFloat = 55
         static let tabBarBottomInset: CGFloat = 25
+        static let tabBarBottomInsetSmallScreen: CGFloat = 10
         static let tabBarWidthFactor: Double = 0.7
     }
 }

@@ -1,6 +1,6 @@
 import UIKit
 
-enum ColorSet {
+public enum ColorSet {
     
     enum TabBarColors {
         static let tabBarBackgroundColor: UIColor = UIColor.rgb(249, 148, 22)
@@ -15,7 +15,7 @@ enum ColorSet {
     
     enum FoundationColors {
         static let mainBackgroundColor: UIColor = UIColor.rgb(33, 29, 63)
-        static let titleColor: UIColor = UIColor.rgb(255, 255, 255)
+        static let titleColor: UIColor = UIColor.rgb(234, 244, 255)
         static let actionButtonsColor: UIColor = UIColor.rgb(246, 249, 228)
     }
     

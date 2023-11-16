@@ -11,7 +11,7 @@ class InteractiveButton: UIButton {
                                 .beginFromCurrentState
                                ]
                 ) {
-                    self.transform = CGAffineTransform(scaleX: 0.97, y: 0.97)
+                    self.transform = CGAffineTransform(scaleX: 0.98, y: 0.98)
                     self.alpha = 0.75
                 }
             } else {

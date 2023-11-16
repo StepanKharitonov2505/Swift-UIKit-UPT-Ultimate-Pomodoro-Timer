@@ -36,7 +36,9 @@ final class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
 
         DispatchQueue.main.async {
             transitionContext.containerView.addSubview(toView)
-            UIView.animate(withDuration: self.transitionDuration, animations: {
+            UIView.animate(
+                withDuration: self.transitionDuration,
+                animations: {
                 fromView.frame = fromFrameEnd
                 toView.frame = frame
             }, completion: {success in

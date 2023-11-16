@@ -19,6 +19,9 @@
 		CE01089B2AF24F69004749C2 /* TimePickerSelectorLayout+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01089A2AF24F69004749C2 /* TimePickerSelectorLayout+Alignment.swift */; };
 		CE01089D2AF24FDA004749C2 /* TimePickerSelectorLayout+ContentOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01089C2AF24FDA004749C2 /* TimePickerSelectorLayout+ContentOffset.swift */; };
 		CE0108A02AF26032004749C2 /* TimePickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01089F2AF26032004749C2 /* TimePickerCollectionViewCell.swift */; };
+		CE0108A52AFA4AD7004749C2 /* TimePickerCellSelectedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0108A42AFA4AD7004749C2 /* TimePickerCellSelectedType.swift */; };
+		CE0108A72AFA644D004749C2 /* TimePickerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0108A62AFA644D004749C2 /* TimePickerType.swift */; };
+		CE0108AB2AFBC9E9004749C2 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0108AA2AFBC9E9004749C2 /* CurrentUser.swift */; };
 		CE19A82B2AD83EE6000B1920 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19A82A2AD83EE6000B1920 /* CustomTransition.swift */; };
 		CE19A82D2AD84200000B1920 /* TimerControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19A82C2AD84200000B1920 /* TimerControlPanel.swift */; };
 		CE19A82F2AD8420B000B1920 /* SettingsControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19A82E2AD8420B000B1920 /* SettingsControlPanel.swift */; };
@@ -44,6 +47,9 @@
 		CE3625432AD6C20B00D4F470 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3625422AD6C20B00D4F470 /* View.swift */; };
 		CE3625462AD6D3F800D4F470 /* SettingsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3625452AD6D3F800D4F470 /* SettingsScreenViewController.swift */; };
 		CE36254A2AD6D7B300D4F470 /* UPTTabBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3625492AD6D7B300D4F470 /* UPTTabBarProtocol.swift */; };
+		CE4F7A382B0607EA0025F31E /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F7A372B0607EA0025F31E /* PieChartViewController.swift */; };
+		CE8537972B023ADC0091F4D7 /* CheckSmallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8537962B023ADC0091F4D7 /* CheckSmallScreen.swift */; };
+		CE8537992B023D1C0091F4D7 /* LogoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8537982B023D1C0091F4D7 /* LogoType.swift */; };
 		CEFAC4442AD8024F00087CC5 /* UPTTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAC4432AD8024F00087CC5 /* UPTTabItem.swift */; };
 		CEFAC4462AD8060E00087CC5 /* UPTTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAC4452AD8060E00087CC5 /* UPTTabBarController.swift */; };
 		CEFAC4482AD806FF00087CC5 /* UPTTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAC4472AD806FF00087CC5 /* UPTTabBar.swift */; };
@@ -66,6 +72,9 @@
 		CE01089A2AF24F69004749C2 /* TimePickerSelectorLayout+Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimePickerSelectorLayout+Alignment.swift"; sourceTree = "<group>"; };
 		CE01089C2AF24FDA004749C2 /* TimePickerSelectorLayout+ContentOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimePickerSelectorLayout+ContentOffset.swift"; sourceTree = "<group>"; };
 		CE01089F2AF26032004749C2 /* TimePickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE0108A42AFA4AD7004749C2 /* TimePickerCellSelectedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerCellSelectedType.swift; sourceTree = "<group>"; };
+		CE0108A62AFA644D004749C2 /* TimePickerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerType.swift; sourceTree = "<group>"; };
+		CE0108AA2AFBC9E9004749C2 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		CE19A82A2AD83EE6000B1920 /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		CE19A82C2AD84200000B1920 /* TimerControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControlPanel.swift; sourceTree = "<group>"; };
 		CE19A82E2AD8420B000B1920 /* SettingsControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsControlPanel.swift; sourceTree = "<group>"; };
@@ -93,6 +102,9 @@
 		CE3625422AD6C20B00D4F470 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		CE3625452AD6D3F800D4F470 /* SettingsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewController.swift; sourceTree = "<group>"; };
 		CE3625492AD6D7B300D4F470 /* UPTTabBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPTTabBarProtocol.swift; sourceTree = "<group>"; };
+		CE4F7A372B0607EA0025F31E /* PieChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
+		CE8537962B023ADC0091F4D7 /* CheckSmallScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckSmallScreen.swift; sourceTree = "<group>"; };
+		CE8537982B023D1C0091F4D7 /* LogoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoType.swift; sourceTree = "<group>"; };
 		CEFAC4432AD8024F00087CC5 /* UPTTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPTTabItem.swift; sourceTree = "<group>"; };
 		CEFAC4452AD8060E00087CC5 /* UPTTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPTTabBarController.swift; sourceTree = "<group>"; };
 		CEFAC4472AD806FF00087CC5 /* UPTTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPTTabBar.swift; sourceTree = "<group>"; };
@@ -140,6 +152,7 @@
 		CE0108862AEAA56A004749C2 /* PieChart */ = {
 			isa = PBXGroup;
 			children = (
+				CE4F7A372B0607EA0025F31E /* PieChartViewController.swift */,
 			);
 			path = PieChart;
 			sourceTree = "<group>";
@@ -178,9 +191,26 @@
 		CE01089E2AF25FE9004749C2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				CE0108A42AFA4AD7004749C2 /* TimePickerCellSelectedType.swift */,
 				CE01089F2AF26032004749C2 /* TimePickerCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		CE0108A82AFBC9C3004749C2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE0108A92AFBC9D3004749C2 /* Storage */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE0108A92AFBC9D3004749C2 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				CE0108AA2AFBC9E9004749C2 /* CurrentUser.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		CE19A8282AD83E82000B1920 /* Router */ = {
@@ -239,6 +269,7 @@
 				CE3625222AD6BBCE00D4F470 /* SceneDelegate.swift */,
 				CE3625362AD6BED000D4F470 /* Scenes */,
 				CE3625372AD6BF2900D4F470 /* Common */,
+				CE0108A82AFBC9C3004749C2 /* Services */,
 				CE19A8342AD930F5000B1920 /* Animations */,
 				CE3625392AD6BFAF00D4F470 /* Resources */,
 				CE36253F2AD6C19D00D4F470 /* Core */,
@@ -264,6 +295,7 @@
 				CE19A8352AD937A4000B1920 /* Base */,
 				CE19A8282AD83E82000B1920 /* Router */,
 				CEFAC44B2AD811B300087CC5 /* Extension */,
+				CE8537952B023ACB0091F4D7 /* Helpers */,
 				CE3625382AD6BF3000D4F470 /* TabBar */,
 			);
 			path = Common;
@@ -316,10 +348,20 @@
 		CE3625442AD6D3D300D4F470 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				CE8537982B023D1C0091F4D7 /* LogoType.swift */,
+				CE0108A62AFA644D004749C2 /* TimePickerType.swift */,
 				CE3625452AD6D3F800D4F470 /* SettingsScreenViewController.swift */,
 				CE19A8382AD94E83000B1920 /* SettingsScreenView.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		CE8537952B023ACB0091F4D7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CE8537962B023ADC0091F4D7 /* CheckSmallScreen.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		CEFAC44B2AD811B300087CC5 /* Extension */ = {
@@ -382,6 +424,7 @@
 				TargetAttributes = {
 					CE36251C2AD6BBCE00D4F470 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -477,14 +520,19 @@
 				CEFAC4442AD8024F00087CC5 /* UPTTabItem.swift in Sources */,
 				CE3625252AD6BBCE00D4F470 /* TimerScreenViewController.swift in Sources */,
 				CE19A82D2AD84200000B1920 /* TimerControlPanel.swift in Sources */,
+				CE4F7A382B0607EA0025F31E /* PieChartViewController.swift in Sources */,
 				CE19A82F2AD8420B000B1920 /* SettingsControlPanel.swift in Sources */,
 				CE3625212AD6BBCE00D4F470 /* AppDelegate.swift in Sources */,
+				CE8537992B023D1C0091F4D7 /* LogoType.swift in Sources */,
+				CE8537972B023ADC0091F4D7 /* CheckSmallScreen.swift in Sources */,
 				CEFAC4462AD8060E00087CC5 /* UPTTabBarController.swift in Sources */,
 				CE0108842AE93DD5004749C2 /* InteractiveButton.swift in Sources */,
 				CEFAC4482AD806FF00087CC5 /* UPTTabBar.swift in Sources */,
 				CE19A8372AD9396C000B1920 /* BaseControlPanel.swift in Sources */,
 				CE19A82B2AD83EE6000B1920 /* CustomTransition.swift in Sources */,
+				CE0108AB2AFBC9E9004749C2 /* CurrentUser.swift in Sources */,
 				CEFAC44A2AD8116C00087CC5 /* ColorSet.swift in Sources */,
+				CE0108A72AFA644D004749C2 /* TimePickerType.swift in Sources */,
 				CEFAC44D2AD811C800087CC5 /* UIColor+Extension.swift in Sources */,
 				CE01088B2AF1384C004749C2 /* UICollectionView+Runtime.swift in Sources */,
 				CE36253C2AD6C13D00D4F470 /* TimerScreenView.swift in Sources */,
@@ -497,6 +545,7 @@
 				CE0108992AF24EBF004749C2 /* TimePickerSelectorLayout+Scale.swift in Sources */,
 				CE01089D2AF24FDA004749C2 /* TimePickerSelectorLayout+ContentOffset.swift in Sources */,
 				CE01088F2AF13C65004749C2 /* TableLayoutCache.swift in Sources */,
+				CE0108A52AFA4AD7004749C2 /* TimePickerCellSelectedType.swift in Sources */,
 				CE01088D2AF138E9004749C2 /* UIScrollView+CenterOffset.swift in Sources */,
 				CE01089B2AF24F69004749C2 /* TimePickerSelectorLayout+Alignment.swift in Sources */,
 				CE3625462AD6D3F800D4F470 /* SettingsScreenViewController.swift in Sources */,
@@ -638,6 +687,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W53T2K88YK;
@@ -661,6 +711,8 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -672,6 +724,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W53T2K88YK;
@@ -695,6 +748,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
