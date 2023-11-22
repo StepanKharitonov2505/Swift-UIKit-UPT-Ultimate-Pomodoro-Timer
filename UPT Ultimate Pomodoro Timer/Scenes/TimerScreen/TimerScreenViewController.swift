@@ -23,6 +23,7 @@ final class TimerScreenViewController: UIViewController, View {
         super.viewDidLoad()
         viewModel = TimerScreenViewModel()
         setupOutput()
+        setTimeSegments()
     }
     
     // MARK: - Rx Output/Input
@@ -47,7 +48,22 @@ final class TimerScreenViewController: UIViewController, View {
 // MARK: - Private Methods
 
 private extension TimerScreenViewController {
-
+    func setTimeSegments() {
+        timerView.pieChartView.segments = [
+            PieChartSegment(
+                color: .red,
+                value: 30
+            ),
+            PieChartSegment(
+                color: .blue,
+                value: 20
+            ),
+            PieChartSegment(
+                color: .green,
+                value: 50
+            ),
+        ]
+    }
 }
 
 // MARK: - Constants

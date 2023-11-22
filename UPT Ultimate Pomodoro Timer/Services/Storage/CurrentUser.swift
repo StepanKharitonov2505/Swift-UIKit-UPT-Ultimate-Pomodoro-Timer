@@ -4,57 +4,43 @@ class CurrentUser {
     
     static let shared = CurrentUser()
     
+    private let defaults = UserDefaults.standard
+    
     private init() {}
     
     var workingPeriodTime: Int {
         get {
-            return UserDefaults
-                .standard
-                .integer(forKey: "workingPeriodTime")
+            return defaults.integer(forKey: "workingPeriodTime")
         }
         set {
-            return UserDefaults
-                .standard
-                .set(newValue, forKey: "workingPeriodTime")
+            return defaults.set(newValue, forKey: "workingPeriodTime")
         }
     }
     
     var shortBreakTime: Int {
         get {
-            return UserDefaults
-                .standard
-                .integer(forKey: "shortBreakTime")
+            return defaults.integer(forKey: "shortBreakTime")
         }
         set {
-            return UserDefaults
-                .standard
-                .set(newValue, forKey: "shortBreakTime")
+            return defaults.set(newValue, forKey: "shortBreakTime")
         }
     }
     
     var longBreakTime: Int {
         get {
-            return UserDefaults
-                .standard
-                .integer(forKey: "longBreakTime")
+            return defaults.integer(forKey: "longBreakTime")
         }
         set {
-            return UserDefaults
-                .standard
-                .set(newValue, forKey: "longBreakTime")
+            return defaults.set(newValue, forKey: "longBreakTime")
         }
     }
     
     var isNotFirstLaunch: Bool {
         get {
-            return UserDefaults
-                .standard
-                .bool(forKey: "notFirstLaunch")
+            return defaults.bool(forKey: "notFirstLaunch")
         }
         set {
-            return UserDefaults
-                .standard
-                .set(newValue, forKey: "notFirstLaunch")
+            return defaults.set(newValue, forKey: "notFirstLaunch")
         }
     }
 }

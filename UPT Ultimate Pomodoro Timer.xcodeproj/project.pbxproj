@@ -47,9 +47,10 @@
 		CE3625432AD6C20B00D4F470 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3625422AD6C20B00D4F470 /* View.swift */; };
 		CE3625462AD6D3F800D4F470 /* SettingsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3625452AD6D3F800D4F470 /* SettingsScreenViewController.swift */; };
 		CE36254A2AD6D7B300D4F470 /* UPTTabBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3625492AD6D7B300D4F470 /* UPTTabBarProtocol.swift */; };
-		CE4F7A382B0607EA0025F31E /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F7A372B0607EA0025F31E /* PieChartViewController.swift */; };
+		CE4F7A382B0607EA0025F31E /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F7A372B0607EA0025F31E /* PieChartView.swift */; };
 		CE8537972B023ADC0091F4D7 /* CheckSmallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8537962B023ADC0091F4D7 /* CheckSmallScreen.swift */; };
 		CE8537992B023D1C0091F4D7 /* LogoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8537982B023D1C0091F4D7 /* LogoType.swift */; };
+		CEE468C92B0E6CAA00E827BB /* PieChartSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE468C82B0E6CAA00E827BB /* PieChartSegment.swift */; };
 		CEFAC4442AD8024F00087CC5 /* UPTTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAC4432AD8024F00087CC5 /* UPTTabItem.swift */; };
 		CEFAC4462AD8060E00087CC5 /* UPTTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAC4452AD8060E00087CC5 /* UPTTabBarController.swift */; };
 		CEFAC4482AD806FF00087CC5 /* UPTTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAC4472AD806FF00087CC5 /* UPTTabBar.swift */; };
@@ -102,9 +103,10 @@
 		CE3625422AD6C20B00D4F470 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		CE3625452AD6D3F800D4F470 /* SettingsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewController.swift; sourceTree = "<group>"; };
 		CE3625492AD6D7B300D4F470 /* UPTTabBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPTTabBarProtocol.swift; sourceTree = "<group>"; };
-		CE4F7A372B0607EA0025F31E /* PieChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
+		CE4F7A372B0607EA0025F31E /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		CE8537962B023ADC0091F4D7 /* CheckSmallScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckSmallScreen.swift; sourceTree = "<group>"; };
 		CE8537982B023D1C0091F4D7 /* LogoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoType.swift; sourceTree = "<group>"; };
+		CEE468C82B0E6CAA00E827BB /* PieChartSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartSegment.swift; sourceTree = "<group>"; };
 		CEFAC4432AD8024F00087CC5 /* UPTTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPTTabItem.swift; sourceTree = "<group>"; };
 		CEFAC4452AD8060E00087CC5 /* UPTTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPTTabBarController.swift; sourceTree = "<group>"; };
 		CEFAC4472AD806FF00087CC5 /* UPTTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPTTabBar.swift; sourceTree = "<group>"; };
@@ -152,7 +154,8 @@
 		CE0108862AEAA56A004749C2 /* PieChart */ = {
 			isa = PBXGroup;
 			children = (
-				CE4F7A372B0607EA0025F31E /* PieChartViewController.swift */,
+				CEE468C82B0E6CAA00E827BB /* PieChartSegment.swift */,
+				CE4F7A372B0607EA0025F31E /* PieChartView.swift */,
 			);
 			path = PieChart;
 			sourceTree = "<group>";
@@ -518,9 +521,10 @@
 				CE0108952AF1472B004749C2 /* TimePickerElementViewModel.swift in Sources */,
 				CE36253E2AD6C14900D4F470 /* TimerScreenViewModel.swift in Sources */,
 				CEFAC4442AD8024F00087CC5 /* UPTTabItem.swift in Sources */,
+				CEE468C92B0E6CAA00E827BB /* PieChartSegment.swift in Sources */,
 				CE3625252AD6BBCE00D4F470 /* TimerScreenViewController.swift in Sources */,
 				CE19A82D2AD84200000B1920 /* TimerControlPanel.swift in Sources */,
-				CE4F7A382B0607EA0025F31E /* PieChartViewController.swift in Sources */,
+				CE4F7A382B0607EA0025F31E /* PieChartView.swift in Sources */,
 				CE19A82F2AD8420B000B1920 /* SettingsControlPanel.swift in Sources */,
 				CE3625212AD6BBCE00D4F470 /* AppDelegate.swift in Sources */,
 				CE8537992B023D1C0091F4D7 /* LogoType.swift in Sources */,

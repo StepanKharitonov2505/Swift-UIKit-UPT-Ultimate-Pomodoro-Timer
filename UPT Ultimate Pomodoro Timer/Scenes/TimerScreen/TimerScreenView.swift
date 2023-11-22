@@ -9,10 +9,11 @@ final class TimerScreenView: UIView {
     public lazy var nextButton = makeButton(.next)
     public lazy var refreshButton = makeButton(.refresh)
     
+    public lazy var pieChartView = makePieChart()
+    
     // MARK: - Private Properties
     
     private lazy var titleLabel = makeTitleLabel()
-    private lazy var timerVisualizeView = makeTimerVisualizeView()
     private lazy var buttonContainer = makeHorizontalStack()
     
     // MARK: - Init
@@ -38,30 +39,30 @@ private extension TimerScreenView {
     func configureUI() {
         backgroundColor = ColorSet.FoundationColors.mainBackgroundColor
         addSubview(titleLabel)
-        addSubview(timerVisualizeView)
+        addSubview(pieChartView)
         addSubview(buttonContainer)
         fillingButtonContainer()
     }
     
     func setConstraint() {
+        let controlButtonBottomInset = CheckSmallScreen.isSmallScreen() ? 75 : 90
+        
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(15)
             make.left.equalTo(self.snp.left).offset(25)
             make.right.equalTo(self.snp.right).inset(25)
         }
         
-        timerVisualizeView.snp.makeConstraints { make in
-            make.left.equalTo(self.snp.left).offset(25)
-            make.right.equalTo(self.snp.right).inset(25)
-            make.top.equalTo(titleLabel.snp.bottom).offset(25)
-            make.bottom.equalTo(self.snp.bottom).inset(180)
+        pieChartView.snp.makeConstraints { make in
+            make.center.equalTo(self.snp.center)
+            make.height.width.equalTo(300)
         }
         
         buttonContainer.snp.makeConstraints { make in
             make.height.equalTo(55)
             make.width.equalTo(self.snp.width).multipliedBy(NumericConstants.widthFactor)
             make.centerX.equalTo(self.snp.centerX)
-            make.bottom.equalTo(self.snp.bottom).inset(90)
+            make.bottom.equalTo(self.snp.bottom).inset(controlButtonBottomInset)
         }
         
         playPauseButton.snp.makeConstraints { make in
@@ -119,22 +120,6 @@ private extension TimerScreenView {
         return label
     }
     
-    func makeTimerVisualizeView() -> UIView {
-        let view = UIView()
-        view.layer.cornerRadius = 20
-        if #available(iOS 13, *) {
-            view.layer.cornerCurve = .continuous
-        }
-        view.backgroundColor = .clear
-        view.layer.borderColor = ColorSet
-            .TabBarColors
-            .ControlPanelColors
-            .controlPanelSeparatorColor
-            .cgColor
-        view.layer.borderWidth = 1
-        return view
-    }
-    
     func makeButton(_ type: ButtonType) -> InteractiveButton {
         let button = InteractiveButton()
         let imageName: String
@@ -169,6 +154,18 @@ private extension TimerScreenView {
         stack.spacing = 5
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
+    }
+    
+    func makePieChart() -> PieChartView {
+        let chart = PieChartView(frame: CGRect(
+            origin: .zero,
+            size: CGSize(
+                width: 300,
+                height: 300
+                )
+            )
+        )
+        return chart
     }
 }
 
